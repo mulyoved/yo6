@@ -117,7 +117,7 @@ angular.module('yo6App')
         });
     };
 
-    $rootScope.updateSession();
+    //$rootScope.updateSession();
 
 
     // button functions
