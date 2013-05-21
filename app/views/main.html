@@ -1,0 +1,26 @@
+<div class="hero-unit">
+	  <h1>'Allo, 'Allo! (version 2.0.8)</h1>
+	  <p>You now have</p>
+	  <ul>
+		<li ng-repeat="thing in awesomeThings">{{thing}}</li>
+	  </ul>
+	  <p>installed.</p>
+	  <h3>Enjoy coding! - Yeoman</h3>
+	 
+	<div id="fb-root"></div>
+		<button ng-click="getLoginStatus()">Get Facebook Status</button>
+		<br>
+		<button ng-click="login()">Facebook Login</button>
+		<br>
+		<button ng-click="logout()">Facebook Logout</button>
+		<br>
+		<button ng-click="getInfo()">Get info</button>
+		<hr>
+		<button ng-click="unsubscribe()">unsubscribe</button>
+		<hr>
+		facebook status: {{fb_status}}
+		<ul>
+			<li ng-repeat="item in session">{{item}}</li>
+		</ul>  
+	</div>
+</div>
