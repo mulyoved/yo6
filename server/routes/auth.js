@@ -27,3 +27,8 @@ exports.login = function(req, res) {
 		console.log('auth/auth no facebook data');
 	}
 };
+
+exports.logout = function(req, res) {
+	var receivedData = req.body;
+	console.log('auth/logout %s', inspect(receivedData));
+};

@@ -11,6 +11,9 @@ var express = require('express')
   , http = require('http')
   , path = require('path');
 
+var util = require('util');
+var inspect = util.inspect;
+
 var app = express();
 
 // all environments
@@ -31,12 +34,19 @@ if ('development' == app.get('env')) {
   app.use(express.errorHandler());
 }
 
-//app.get('/', routes.index);
+
+var appIndex = express.static(path.join(__dirname, '../app/index.html'));
+app.get('/', appIndex);
 app.post('/auth/session', auth.session);
 app.post('/auth/login', auth.login);
+app.post('/auth/logout', auth.logout);
+app.get('*', appIndex);
 
 var server = http.createServer(app);
 exports = module.exports = server;
+
+//console.log('routes:%s', inspect(routes))
+//console.log('static: %s', express.static(path.join(__dirname, '../app')));
 
 exports.use = function() {
 	app.use.apply(app, arguments);

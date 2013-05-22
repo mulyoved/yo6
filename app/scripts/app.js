@@ -7,6 +7,10 @@ var app = angular.module('yo6App', [])
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
       })
+      .when('/tlogin', {
+        templateUrl: 'views/tlogin.html',
+        controller: 'MainCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
@@ -20,6 +24,13 @@ app.run(function ($rootScope) {
             cookie:true,
             xfbml:true
         });
+
+        console.log('window.fbAsyncInit a1');
+        FB.getLoginStatus(function (response) {
+                console.log('window.fbAsyncInit a2 ' + response.status);
+                $rootScope.$broadcast("fb_statusChange", {'status':response.status});
+            }, true);
+        console.log('window.fbAsyncInit a3');
     };
 
     (function (d) {

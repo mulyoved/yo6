@@ -8,10 +8,12 @@ angular.module('yo6App')
       'Karma'
     ];
 	
+    $rootScope.brand = 'Evnt7x24';
     $scope.info = {};
 
     $rootScope.$on("fb_statusChange", function (event, args) {
         $rootScope.fb_status = args.status;
+        $rootScope.isLoggedin = args.status == 'connected';
         $rootScope.$apply();
     });
     $rootScope.$on("fb_get_login_status", function () {
@@ -19,13 +21,16 @@ angular.module('yo6App')
     });
     $rootScope.$on("fb_login_failed", function () {
         console.log("fb_login_failed");
+        Facebook.getLoginStatus();
     });
     $rootScope.$on("fb_logout_succeded", function () {
         console.log("fb_logout_succeded");
+        Facebook.getLoginStatus();
         $rootScope.id = "";
     });
     $rootScope.$on("fb_logout_failed", function () {
         console.log("fb_logout_failed!");
+        Facebook.getLoginStatus();
     });
 
     $rootScope.$on("fb_connected", function (event, args) {
@@ -133,7 +138,7 @@ angular.module('yo6App')
         Facebook.logout();
         $rootScope.session = {};
         //make a call to a php page that will erase the session data
-        $http.post("php/logout.php");
+        $http.post("auth/logout");
     };
 
     $scope.unsubscribe = function () {
@@ -147,5 +152,4 @@ angular.module('yo6App')
         $rootScope.info = $rootScope.session;
 
     };
-	
   });
