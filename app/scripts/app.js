@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('yo6App', [])
+var app = angular.module('yo6App', ['ui.bootstrap'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
@@ -17,7 +17,10 @@ var app = angular.module('yo6App', [])
   });
 
 app.run(function ($rootScope) {
+    console.log('app.run');
     window.fbAsyncInit = function () {
+        console.log('window.fbAsyncInit');
+
         FB.init({
             appId:'193911810758167',
             status:true,

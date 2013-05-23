@@ -5,6 +5,7 @@
  */
 
 var express = require('express')
+  , path = require('./models/db')
   , routes = require('./routes')
   , user = require('./routes/user')
   , auth = require('./routes/auth')

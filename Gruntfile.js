@@ -45,7 +45,7 @@ module.exports = function (grunt) {
       }
     },
     express: {
-      livereload: {
+      server: {
         options: {
           port: 9000,
           bases: path.resolve('./app'),
@@ -280,7 +280,7 @@ module.exports = function (grunt) {
     //'compass:server',
     'livereload-start',
     //'connect:livereload',
-    'express:livereload',
+    'express:server',
     'open',
     'watch'
   ]);

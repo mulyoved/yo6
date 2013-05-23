@@ -1,81 +1,17 @@
-<div class="hero-unit"> <!-- this what add the extra space at the top of the pag -->
-	<div id="fb-root"></div>
-	<div ng-show="isLoggedin">
-		<div class="navbar navbar-inverse nav">
-			<div class="navbar-inner">
-				<div class="container">
-					<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-						<span class="icon-bar"></span>
-					</a>
-					<a class="brand" href="/">{{brand}}</a>
-
-					<div class="nav-collapse">
-						<ul class="nav" ng-show="false">
-							<li class="divider-vertical"></li>
-							<li><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
-						</ul>
-
-						<ul class="nav" ng-show="false">
-							<li class="dropdown">
-								<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-									Dropdown
-									<i class="caret"></i>
-								</a>
-								<ul class="dropdown-menu">
-									<li><a href="#">One</a></li>
-									<li><a href="#">Two</a></li>
-									<li><a href="#">Three</a></li>
-								</ul>
-							</li>
-						</ul>
-
-						<div class="pull-right">
-							<ul class="nav pull-right">
-								<li class="dropdown">
-									<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-										Welcome, User <b class="caret"></b>
-									</a>
-									<ul class="dropdown-menu">
-										<li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
-										<li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
-										<li class="divider"></li>
-										<li><a href="/auth/logout"><i class="icon-off"></i> Logout</a></li>
-									</ul>
-								</li>
-							</ul>
-						</div>
-					</div>
+<div> <!-- class="hero-unit" this what add the extra space at the top of the page -->
+		<div ng-show="isLoggedin">
+			<div ng-include="'views/includes/toolbar.html'"></div>
+			<div>Some events</div>
+		</div>
+		<div ng-hide="isLoggedin">
+			<div ng-include="'views/includes/prelogin_toolbar.html'"></div>
+			<div class="row-fluid">
+				<div class="span12 pagination-centered">
+					<h1>{{brand}} Events Portal</h1>
+					<button ng-click="login()" class="btn btn-large btn-primary" type="button">Facebook Login</button>
 				</div>
 			</div>
 		</div>
-
-
-		<h1>{{brand}} Events Portal</h1>
-		<button ng-click="logout()" class="btn btn-large btn-primary" type="button">Facebook Logout</button>	
-		<div>Some events</div>
-	</div>
-	<div ng-hide="isLoggedin">
-		<h1>{{brand}} Events Portal</h1>
-		<button ng-click="login()" class="btn btn-large btn-primary" type="button">Facebook Login</button>
-	</div>
-	<div>
-		<hr>
-		<h2>Debug Panel</h2>
-		<button ng-click="getLoginStatus()">Get Facebook Status</button>
-		<br>
-		<button ng-click="login()">Facebook Login</button>
-		<br>
-		<button ng-click="logout()">Facebook Logout</button>
-		<br>
-		<button ng-click="getInfo()">Get info</button>
-		<button ng-click="unsubscribe()">unsubscribe</button>
-		<br>
-		facebook status: {{fb_status}}
-		<ul>
-			<li ng-repeat="item in session">{{item}}</li>
-		</ul>  
-	</div>
-</div>
+		<div ng-include="'views/includes/debug.html'">
+		</div>
 </div>

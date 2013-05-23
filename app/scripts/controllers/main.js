@@ -9,14 +9,28 @@ angular.module('yo6App')
     ];
 	
     $rootScope.brand = 'Evnt7x24';
+    $scope.events_date = 'Today';
+    $scope.events_time = 'All Day';
+    $scope.events_location = 'Tel-Aviv, Israel';
+
     $scope.info = {};
+    $scope.isCollapsed = false;
+    $scope.userID = '';
+
+
 
     $rootScope.$on("fb_statusChange", function (event, args) {
         $rootScope.fb_status = args.status;
         $rootScope.isLoggedin = args.status == 'connected';
+        if (!$rootScope.isLoggedin) {
+            $rootScope.userID = '';
+        }
+
+        console.log("onfb_statusChange");
         $rootScope.$apply();
     });
     $rootScope.$on("fb_get_login_status", function () {
+        console.log("on fb_get_login_status");
         Facebook.getLoginStatus();
     });
     $rootScope.$on("fb_login_failed", function () {
@@ -34,6 +48,7 @@ angular.module('yo6App')
     });
 
     $rootScope.$on("fb_connected", function (event, args) {
+        console.log("fb_connected event");
         /*
          If facebook is connected we can follow two paths:
          The users has either authorized our app or not.
@@ -69,6 +84,7 @@ angular.module('yo6App')
 
             //findme: mulyoved, I don't understand this how we can not authorized? maybe if user does not give permmisions?
             console.log("user is connected to facebook but has not authorized our app, not sure what to do with this");
+            $scope.userID = '';
 
             /*
             FB.api(
@@ -92,19 +108,15 @@ angular.module('yo6App')
             */
         }
         else {
-            console.log("user is connected to facebook and has authorized our app");
-            console.log(args.facebook_id);
-            params = args.facebook_id;
-            //the parameter needed in that case is just the users facebook id
-            /*
-            params = {
-                userID: args.facebook_id.userId,
-                accessToken: args.facebook_id.accessToken,
-                expiresIn: args.facebook_id.expiresIn
-                //signedRequest: args.facebook_id.signedRequest
-            };
-            */
-            authenticateViaFacebook(params);
+            console.log("user is connected to facebook and has authorized our app: %s curent user (%s)", args.facebook_id.userID, $rootScope.userID);
+            if ($rootScope.userID != args.facebook_id.userID) {
+                console.log(args.facebook_id);
+                params = args.facebook_id;
+                console.log("send server the user info: " + params.userID);
+                authenticateViaFacebook(params);
+                $rootScope.userID = args.facebook_id.userID;
+                console.log("After Send to server %s curent user (%s)", args.facebook_id.userID, $rootScope.userID);
+            }
         }
 
     });
@@ -127,14 +139,17 @@ angular.module('yo6App')
 
     // button functions
     $scope.getLoginStatus = function () {
+        console.log('MainCtrl getLoginStatus');
         Facebook.getLoginStatus();
     };
 
     $scope.login = function () {
+        console.log('MainCtrl login');
         Facebook.login();
     };
 
     $scope.logout = function () {
+        console.log('MainCtrl logout');
         Facebook.logout();
         $rootScope.session = {};
         //make a call to a php page that will erase the session data
@@ -152,4 +167,10 @@ angular.module('yo6App')
         $rootScope.info = $rootScope.session;
 
     };
-  });
+
+    $scope.setEventsTime = function (time) {
+        console.log('setEventsTime, ' + time);
+        $rootScope.events_time = time;
+    }
+
+});

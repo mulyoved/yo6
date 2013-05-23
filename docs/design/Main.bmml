@@ -1,17 +1,17 @@
-<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="2526" measuredH="467" mockupW="2505" mockupH="446">
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="2526" measuredH="467" mockupW="2505" mockupH="441">
   <controls>
     <control controlID="2" controlTypeID="com.balsamiq.mockups::HRule" x="21" y="88" w="2505" h="-1" measuredW="100" measuredH="10" zOrder="0" locked="false" isInGroup="-1"/>
-    <control controlID="5" controlTypeID="com.balsamiq.mockups::LinkBar" x="21" y="33" w="-1" h="-1" measuredW="339" measuredH="19" zOrder="1" locked="false" isInGroup="-1">
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::LinkBar" x="21" y="33" w="-1" h="-1" measuredW="62" measuredH="19" zOrder="1" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Today%2C%20All%20Day%2C%20Morning%20Afternoon%2C%20Evening%2C%20Night</text>
+        <text>Today</text>
       </controlProperties>
     </control>
-    <control controlID="6" controlTypeID="com.balsamiq.mockups::LinkBar" x="690" y="33" w="-1" h="-1" measuredW="354" measuredH="19" zOrder="2" locked="false" isInGroup="-1">
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::LinkBar" x="184" y="33" w="-1" h="-1" measuredW="109" measuredH="19" zOrder="2" locked="false" isInGroup="-1">
       <controlProperties>
-        <text>Tel%20Aviv%20Israel%2C%20Logout%3A%20Muly%20Oved%2C%20Preferences%2C%20About</text>
+        <text>Tel%20Aviv%20Israel</text>
       </controlProperties>
     </control>
-    <control controlID="7" controlTypeID="com.balsamiq.mockups::Title" x="417" y="21" w="-1" h="-1" measuredW="181" measuredH="43" zOrder="3" locked="false" isInGroup="-1">
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Title" x="468" y="26" w="-1" h="-1" measuredW="181" measuredH="43" zOrder="3" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Evnt7x24</text>
       </controlProperties>
@@ -19,6 +19,17 @@
     <control controlID="8" controlTypeID="com.balsamiq.mockups::DataGrid" x="21" y="105" w="1023" h="362" measuredW="364" measuredH="179" zOrder="4" locked="false" isInGroup="-1">
       <controlProperties>
         <text>Event%20%5E%2C%20Location%20%5Ev%2C%20Time%2C%20Description%0AGiacomo%20Guilizzoni%5CrFounder%20%26%20CEO%2C%2037%2C%20Peldi%2C%20%28o%29%0AMarco%20Botton%5CrTuttofare%2C%2034%2C%20%2C%20%5Bx%5D%0AMariah%20Maclachlan%5CrBetter%20Half%2C%2037%2C%20Patata%2C%20%5B-%5D%0AValerie%20Liberty%5CrHead%20Chef%2C%20%3A%29%2C%20Val%2C%20%5Bx%5D%0AGuido%20Jack%20Guilizzoni%2C%206%2C%20The%20Guids%2C%20%5B%5D%0A%7B65L%2C%200R%2C%2035%2C%200C%7D</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::SearchBox" x="802" y="33" w="-1" h="-1" measuredW="120" measuredH="25" zOrder="5" locked="false" isInGroup="-1"/>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::ComboBox" x="951" y="33" w="-1" h="-1" measuredW="93" measuredH="78" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Muly%20Oved%0APreferences%0AAbout%20Event7x24%0ALogout</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::ComboBox" x="98" y="26" w="-1" h="-1" measuredW="71" measuredH="93" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>All%20Day%0AMorning%0AAfternoon%0AEvening%0ANight</text>
       </controlProperties>
     </control>
   </controls>

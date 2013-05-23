@@ -1,0 +1,15 @@
+<hr>
+<h2>Debug Panel</h2>
+<button ng-click="getLoginStatus()">Get Facebook Status</button>
+<br>
+<button ng-click="login()">Facebook Login</button>
+<br>
+<button ng-click="logout()">Facebook Logout</button>
+<br>
+<button ng-click="getInfo()">Get info</button>
+<button ng-click="unsubscribe()">unsubscribe</button>
+<br>
+facebook status: {{fb_status}}
+<ul>
+	<li ng-repeat="item in session">{{item}}</li>
+</ul>  

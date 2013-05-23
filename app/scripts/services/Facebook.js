@@ -7,12 +7,14 @@ angular.module('yo6App')
 
 	return {
         getLoginStatus:function () {
+            console.log("Facebook getLoginStatus()");
             FB.getLoginStatus(function (response) {
                 console.log("FB.getLoginStatus broadcast fb_statusChange (a9)");
                 $rootScope.$broadcast("fb_statusChange", {'status':response.status});
             }, true);
         },
         login:function () {
+            console.log("Facebook login()");
             FB.getLoginStatus(function (response) {
                 switch (response.status) {
                     case 'connected':
