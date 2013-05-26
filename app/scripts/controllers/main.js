@@ -149,11 +149,11 @@ angular.module('yo6App')
     };
 
     $scope.logout = function () {
-        console.log('MainCtrl logout');
+        console.log('MainCtrl logout, %s', $rootScope.userID);
         Facebook.logout();
         $rootScope.session = {};
         //make a call to a php page that will erase the session data
-        $http.post("auth/logout");
+        $http.post("auth/logout", { 'userID': $rootScope.userID });
     };
 
     $scope.unsubscribe = function () {

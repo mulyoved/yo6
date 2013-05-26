@@ -26,30 +26,67 @@ exports.login = function(req, res) {
 		req.session.user = receivedData;
 		console.log('auth/login save user: %s', userId);
 
-		//Save to mongoose
-		user = new User({
-			userID:  userId,
-			accessToken: receivedData['accessToken'],
-			expireIn: receivedData['expireIn'],
-			signedRequest: receivedData['signedRequest']
-		});
-		console.log('auth/login mongoose user created: %s', user);
+		User
+		.findOne({'userID': userId})
+		.exec(function(err,user) {
+	        if (err) console.error('failed to find user: %s', err);
 
-		user.save(function(err,user) {
-			if (err) {
-				console.error('failed to save user to database: %s', err);
-			}
-			else {
-				console.log('saved user to database: %s', user.userID);
-			}
+	        if (!user) {
+	        	user = new User({ userID:  userId});
+	        }
+
+			user.accessToken = receivedData['accessToken'];
+			user.expireIn = receivedData['expireIn'];
+			user.signedRequest = receivedData['signedRequest'];
+			user.login = new Date().toISOString();
+
+			user.save(function(err,user) {
+				if (err) {
+					console.error('failed to save user to database: %s', err);
+				}
+				else {
+					console.log('saved user to database: %s', user.userID);
+				}
+			});
 		});
 	}
 	else {				
-		console.log('auth/auth no facebook data');
+		console.log('auth/login no facebook data');
 	}
 };
 
 exports.logout = function(req, res) {
 	var receivedData = req.body;
 	console.log('auth/logout %s', inspect(receivedData));
+
+	if (receivedData && receivedData['userID']) {
+		var userId = receivedData['userID'];
+
+		User
+		.findOne({'userID': userId})
+		.exec(function(err,user) {
+	        if (err) console.error('failed to find user: %s', err);
+
+	        if (!user) {
+	        	console.error('logout unknown user');
+	        }
+	        else {
+				user.logout = new Date().toISOString();
+
+				user.save(function(err,user) {
+					if (err) {
+						console.error('failed to save user to database: %s', err);
+					}
+					else {
+						console.log('saved user to database: %s', user.userID);
+					}
+				});
+			}
+		});
+
+	}
+	else {				
+		console.log('auth/logout no facebook data');
+	}
+
 };

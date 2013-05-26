@@ -1,16 +1,16 @@
 console.log('start db.js');
 var mongoose = require( 'mongoose' );
 
-mongoose.set('debug', true);
+mongoose.set('debug', false);
 
 var userSchema = new mongoose.Schema({
 	userID: String,
 	accessToken: String,
 	expireIn: Number,
 	signedRequest: String,
-	login: Date,
-	logout: Date,
-	created: Date
+	login: { type: Date, default: Date.now },
+	logout: { type: Date, default: '' },
+	created: { type: Date, default: Date.now }
 }, 
 { versionKey: false });
 
