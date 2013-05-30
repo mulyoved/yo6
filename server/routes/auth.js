@@ -1,6 +1,5 @@
 var util = require('util');
 var inspect = util.inspect;
-var db = {};
 
 var mongoose = require('mongoose')
   , User = mongoose.model('User');
@@ -21,8 +20,7 @@ exports.login = function(req, res) {
 	console.log('auth/login %s', inspect(receivedData));
 
 	if (receivedData && receivedData['userID'] && receivedData['accessToken']) {
-		var userId = receivedData['userID'];
-		db[userId] = receivedData;
+		var userId = parseInt(receivedData['userID']);
 		req.session.user = receivedData;
 		console.log('auth/login save user: %s', userId);
 
@@ -60,7 +58,7 @@ exports.logout = function(req, res) {
 	console.log('auth/logout %s', inspect(receivedData));
 
 	if (receivedData && receivedData['userID']) {
-		var userId = receivedData['userID'];
+		var userId = parseInt(receivedData['userID']);
 
 		User
 		.findOne({'userID': userId})

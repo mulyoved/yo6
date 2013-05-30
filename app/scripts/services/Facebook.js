@@ -14,6 +14,10 @@ angular.module('yo6App')
             }, true);
         },
         login:function () {
+
+            var fbScope = { scope: 'email,rsvp_event,user_events,friends_events,user_location,friends_location'};
+            //was {scope:'read_stream, publish_stream, email'}
+
             console.log("Facebook login()");
             FB.getLoginStatus(function (response) {
                 switch (response.status) {
@@ -34,7 +38,7 @@ angular.module('yo6App')
                                 console.log("FB.login broadcast fb_login_failed (a3)");
                                 $rootScope.$broadcast('fb_login_failed');
                             }
-                        }, {scope:'read_stream, publish_stream, email'});
+                        }, fbScope);
                         break;
                     default:
                         FB.login(function (response) {
@@ -47,7 +51,7 @@ angular.module('yo6App')
                                 console.log("FB.login broadcast fb_login_failed (a5)");
                                 $rootScope.$broadcast('fb_login_failed');
                             }
-                        });
+                        }, fbScope);
                         break;
                 }
             }, true);

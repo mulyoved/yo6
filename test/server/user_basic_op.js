@@ -1,13 +1,14 @@
 'use strict';
 
 var assert = require("assert")
+
 describe('Mongoose Connection', function(){
   var db = require('../../server/models/db');
   var mongoose = require('../../server/node_modules/mongoose');
   var User = mongoose.model('User');
 
   var u = {
-    userID:  'TEST_id',
+    userID:  999999999,
     accessToken: 'TEST_accessToken',
     signedRequest: 'TEST_signedRequest'
   };
@@ -59,6 +60,18 @@ function confirmFields(expireIn) {
 
       User
       .findOne({'userID': u.userID})
+      .exec(function(err,user) {
+        if (err) done(err);
+        fUser = user;
+        done();
+      })
+    });
+
+    it('find string', function(done) {
+      fUser = null;
+
+      User
+      .findOne({'userID': '999999999'})
       .exec(function(err,user) {
         if (err) done(err);
         fUser = user;

@@ -1,0 +1,11 @@
+// Facebook app config for tests
+module.exports = {
+  facebook: {
+	access_token: 'CAACwXJyZAFhcBAH3s4ctBMmhXM8GOOb7KI0NGkAq7eodZCPjxL7GdwiFQZChxcwg3jSAZA08CutqZAV7yUPHBmvJhKVOrcyYtmtAwwtJ5NMyaAvc3NAHRkz8F8C5TM1RM8KW00JZAPnZCz3D8jZBMiUZB4GLjcl4tVjLG1xzZBZBJEvo1W6HmXbrRvYe1tUVUZBMx4iRkp9JnsLZCwgZDZD',
+	long_access_token: 'CAACwXJyZAFhcBAODRBWC2a5kIK8elS6wL9NGZApanQI4qncA1XlykxIvZAxTTZCZB0nG2v09VraFNZCqnhalaxCTYNx9XUoZB0I0Cl6iCkUnX8ORZBA5EgiwwE9bVVkxV3q6e5u0WhQoMOvlGZC9y7oVM',
+
+	me_id: '100001047971442',
+	eid: '326118264147358',
+	uid: '674697303'
+  }
+}

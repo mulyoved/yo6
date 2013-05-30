@@ -6,3 +6,4 @@ mocha ./test/server/
 
 
 nodebug C:/Users/Muly/AppData/Roaming/npm/node_modules/mocha/bin/_mocha ./test/server/
+nodebug C:/Users/Muly/AppData/Roaming/npm/node_modules/mocha/bin/_mocha --timeout 1000000 ./test/server/fql_sample_batch.js

@@ -8,6 +8,9 @@
   "dependencies": {
     "express": "3.2.4",
     "ejs": "*",
-    "mongoose": "~3.6.11"
-  },
+    "mongoose": "~3.6.11",
+    "fbgraph": "~0.2.6",
+    "q": "~0.9.4",
+    "mongoose-q": "0.0.4"
+  }
 }
