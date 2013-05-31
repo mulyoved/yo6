@@ -1,17 +1,18 @@
 <div> <!-- class="hero-unit" this what add the extra space at the top of the page -->
-		<div ng-show="isLoggedin">
-			<div ng-include="'views/includes/toolbar.html'"></div>
-			<div>Some events</div>
-		</div>
-		<div ng-hide="isLoggedin">
-			<div ng-include="'views/includes/prelogin_toolbar.html'"></div>
-			<div class="row-fluid">
-				<div class="span12 pagination-centered">
-					<h1>{{brand}} Events Portal</h1>
-					<button ng-click="login()" class="btn btn-large btn-primary" type="button">Facebook Login</button>
-				</div>
+	<div ng-show="isLoggedin">
+		<div ng-include="'views/includes/toolbar.html'"></div>
+		<div>Some events 5</div>
+		<!-- <div infinite-scroll="myPagingFunction()" infinite-scroll-distance="3"></div> -->
+	</div>
+	<div ng-hide="isLoggedin">
+		<div ng-include="'views/includes/prelogin_toolbar.html'"></div>
+		<div class="row-fluid">
+			<div class="span12 pagination-centered">
+				<h1>{{brand}} Events Portal</h1>
+				<button ng-click="login()" class="btn btn-large btn-primary" type="button">Facebook Login</button>
 			</div>
 		</div>
-		<div ng-include="'views/includes/debug.html'">
-		</div>
+	</div>
+	<div ng-include="'views/includes/debug.html'">
+	</div>
 </div>

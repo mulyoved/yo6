@@ -37,6 +37,7 @@ module.exports = function (grunt) {
       livereload: {
         files: [
           '<%= yeoman.app %>/{,*/}*.html',
+          '<%= yeoman.app %>/views/includes/{,*/}*.html',
           '{.tmp,<%= yeoman.app %>}/styles/{,*/}*.css',
           '{.tmp,<%= yeoman.app %>}/scripts/{,*/}*.js',
           '<%= yeoman.app %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}'
@@ -51,7 +52,15 @@ module.exports = function (grunt) {
           bases: path.resolve('./app'),
           monitor: {},
           debug: true,
-          server: path.resolve('./server/app_create')
+          server: path.resolve('./server/app_create'),
+          middleware: function (connect) {
+            return [
+              lrSnippet,
+              mountFolder(connect, '.tmp'),
+              mountFolder(connect, yeomanConfig.app)
+            ];
+          }
+          
         }
       }
     },  
@@ -281,6 +290,17 @@ module.exports = function (grunt) {
     'livereload-start',
     //'connect:livereload',
     'express:server',
+    'open',
+    'watch'
+  ]);
+
+  grunt.registerTask('serverAng', [
+    'clean:server',
+    'coffee:dist',
+    //'compass:server',
+    'livereload-start',
+    'connect:livereload',
+    //'express:server',
     'open',
     'watch'
   ]);
