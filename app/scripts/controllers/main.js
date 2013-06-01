@@ -1,7 +1,11 @@
 'use strict';
 
+//angular.module('yo6App', ['infinite-scroll'])
+//angular.module('yo6App', ['infinite-scroll'])
 angular.module('yo6App')
   .controller('MainCtrl', function (Facebook, $scope, $rootScope, $http, $location) {
+
+    console.log('module1');
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
@@ -17,7 +21,8 @@ angular.module('yo6App')
     $scope.isCollapsed = false;
     $scope.userID = '';
 
-
+    //to avoid refresh and bliking parts pf the page need to make it 3 state, unitalized, true, false and hide both part if unitalized
+    $scope.isLoggedin = true;
 
     $rootScope.$on("fb_statusChange", function (event, args) {
         $rootScope.fb_status = args.status;
@@ -173,4 +178,43 @@ angular.module('yo6App')
         $rootScope.events_time = time;
     }
 
+})
+.controller('EventsController', function($scope, $http) {
+    console.log('EventsController');
+    $scope.items = [];
+    $scope.busy = false;
+    $scope.after = '';
+
+    $scope.loadEvents = function() {
+        console.log('next page');
+        if ($scope.busy) return;
+        $scope.busy = true;
+
+        var url = "mockup/fbevents_sample.json";
+        //var url = "http://api.reddit.com/hot?after=" + $scope.after + "&jsonp=JSON_CALLBACK";
+        $http.get(url)
+        .success(function(data) {
+            console.log('json - success');
+            var items = data;
+            for (var i = 0; i < items.length; i++) {
+                $scope.items.push(items[i]);
+            }
+            //$scope.after = "t3_" + $scope.items[$scope.items.length - 1]._id;
+            $scope.busy = false;
+        })
+        .error(function(data, status, headers, config) {
+            console.log('json - error');
+        });
+    };
+})
+.controller('DemoController', function($scope) {
+  $scope.images = [1, 2, 3, 4, 5, 6, 7, 8];
+
+  $scope.loadMore = function() {
+    var last = $scope.images[$scope.images.length - 1];
+    for(var i = 1; i <= 8; i++) {
+      $scope.images.push(last + i);
+    }
+  };
 });
+

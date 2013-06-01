@@ -4,19 +4,17 @@ var util = require('util');
 var inspect = util.inspect;
 var assert = require("assert")
 var Q = require('../../server/node_modules/q');
+var fs = require('fs');
 
 
 //var mongoose = require('../../server/node_modules/mongoose');
 var mongoose = require('../../server/node_modules/mongoose-q')();
-// try catch needed to work with mocha --watch
-var User;
-try {
-	var User = mongoose.model('User');
-}
-catch (e) {
+if (mongoose.modelNames().length == 0) {
 	var db = require('../../server/models/db');
-	var User = mongoose.model('User');
 }
+var User = mongoose.model('User');
+var fbUser = mongoose.model('fbUser');
+var fbEvent = mongoose.model('fbEvent');
 
 var u = {
 	userID:  999999999,
@@ -109,6 +107,32 @@ describe('Mongoose Q', function() {
 				done();
 			})
 			.done();
+		});
+
+		it('Query fbEvent', function(done) {
+			fbEvent
+			.find()
+			.limit(10)
+			.execQ()
+			.then(function(users) {
+				if (users) {
+					console.log('Found %d events', users.length);
+
+					var ret = fs.writeFileSync('app/mockup/fbevents_sample.json', JSON.stringify(users, null, 4));
+				}
+				else {
+					console.log('events not found');
+				}
+			})
+			.fail(reportError)
+			.fin(done)
+			.done();
+		});
+
+		it('Read fbEvent mockup', function(done) {
+			var ret = require('../../app/mockup/fbevents_sample.json'); 
+			console.log('Found %d events', ret.length);
+			done();
 		});
 	});
 });

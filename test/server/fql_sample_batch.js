@@ -182,36 +182,6 @@ describe('fbgraph', function(){
 			})
 			.fin(done)
 			.done();
-
-			/*
-			graph
-			.fql(query1, function(err, res) {
-				console.log('BATCH Res: %s', inspect(res));
-
-				debugger;
-				var _data = res.data;
-			  //console.log('data: %s', inspect(_data));
-
-			  for (var i = 0; i < _data.length; i++) {
-				var item = _data[i];
-				//console.log('item: %s', inspect(item));
-
-				var name = item.name;
-				var data = item.fql_result_set;
-
-				//console.log('data: %s = %s', name, data);
-				if (name == 'user_info') {
-					var uid = data.uid;
-				  //fbUser.findOne({uid: uid}).
-
-			  }
-			  else if (name == 'user_friends') {
-
-			  }
-			  else if (name == 'user_events') {
-
-			  }
-			  */
 		});
 	});
 })
