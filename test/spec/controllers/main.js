@@ -3,6 +3,7 @@
 describe('Controller: MainCtrl', function () {
 
   // load the controller's module
+  //, ['ui.bootstrap','infinite-scroll'])
   beforeEach(module('yo6App'));
 
   var MainCtrl,

@@ -1,11 +1,15 @@
 'use strict';
 
-var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll'])
+var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll', 'ui.state'])
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
+      })
+      .when('/event/:eid', {
+        templateUrl: 'views/event.html',
+        controller: 'EventDetailController'
       })
       .when('/tlogin', {
         templateUrl: 'views/tlogin.html',

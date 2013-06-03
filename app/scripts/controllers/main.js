@@ -1,9 +1,8 @@
 'use strict';
 
-//angular.module('yo6App', ['infinite-scroll'])
-//angular.module('yo6App', ['infinite-scroll'])
-angular.module('yo6App')
-  .controller('MainCtrl', function (Facebook, $scope, $rootScope, $http, $location) {
+var app = angular.module('yo6App');
+
+app.controller('MainCtrl', function (Facebook, $scope, $rootScope, $http, $location) {
 
     console.log('module1');
     $scope.awesomeThings = [
@@ -186,28 +185,35 @@ angular.module('yo6App')
     $scope.after = '';
 
     $scope.loadEvents = function() {
-        console.log('next page');
-        if ($scope.busy) return;
-        $scope.busy = true;
+        if ($scope.items.length < 30) {
+            console.log('next page');
+            if ($scope.busy) return;
+            $scope.busy = true;
 
-        var url = "mockup/fbevents_sample.json";
-        //var url = "http://api.reddit.com/hot?after=" + $scope.after + "&jsonp=JSON_CALLBACK";
-        $http.get(url)
-        .success(function(data) {
-            console.log('json - success');
-            var items = data;
-            for (var i = 0; i < items.length; i++) {
-                $scope.items.push(items[i]);
-            }
-            //$scope.after = "t3_" + $scope.items[$scope.items.length - 1]._id;
-            $scope.busy = false;
-        })
-        .error(function(data, status, headers, config) {
-            console.log('json - error');
-        });
+            var url = "mockup/fbevents_sample.json";
+            //var url = "http://api.reddit.com/hot?after=" + $scope.after + "&jsonp=JSON_CALLBACK";
+            $http.get(url)
+            .success(function(data) {
+                console.log('json - success');
+                var items = data;
+                for (var i = 0; i < items.length; i++) {
+                    $scope.items.push(items[i]);
+                }
+                //$scope.after = "t3_" + $scope.items[$scope.items.length - 1]._id;
+                $scope.busy = false;
+            })
+            .error(function(data, status, headers, config) {
+                console.log('json - error');
+            });
+        }
     };
-})
-.controller('DemoController', function($scope) {
+});
+
+app.controller('EventDetailController', function($scope, $routeParams) {
+    $scope.eid = $routeParams.eid;
+});
+
+app.controller('DemoController', function($scope) {
   $scope.images = [1, 2, 3, 4, 5, 6, 7, 8];
 
   $scope.loadMore = function() {
