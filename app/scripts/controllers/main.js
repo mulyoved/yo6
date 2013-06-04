@@ -3,22 +3,19 @@
 var app = angular.module('yo6App');
 
 app.controller('MainCtrl', function (Facebook, $scope, $rootScope, $http, $location) {
+    console.log('MainCtrl');
 
-    console.log('module1');
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
       'AngularJS',
       'Karma'
     ];
 	
-    $rootScope.brand = 'Evnt7x24';
-    $scope.events_date = 'Today';
-    $scope.events_time = 'All Day';
-    $scope.events_location = 'Tel-Aviv, Israel';
+    $scope.brand = 'Evnt7x24';
 
     $scope.info = {};
-    $scope.isCollapsed = false;
     $scope.userID = '';
+    $scope.userName = "HardCoded";
 
     //to avoid refresh and bliking parts pf the page need to make it 3 state, unitalized, true, false and hide both part if unitalized
     $scope.isLoggedin = true;
@@ -172,13 +169,8 @@ app.controller('MainCtrl', function (Facebook, $scope, $rootScope, $http, $locat
 
     };
 
-    $scope.setEventsTime = function (time) {
-        console.log('setEventsTime, ' + time);
-        $rootScope.events_time = time;
-    }
-
 })
-.controller('EventsController', function($scope, $http) {
+.controller('EventsController', function($scope, $http, eventStorage) {
     console.log('EventsController');
     $scope.items = [];
     $scope.busy = false;
@@ -197,6 +189,7 @@ app.controller('MainCtrl', function (Facebook, $scope, $rootScope, $http, $locat
                 console.log('json - success');
                 var items = data;
                 for (var i = 0; i < items.length; i++) {
+                    eventStorage.add(items[i]);
                     $scope.items.push(items[i]);
                 }
                 //$scope.after = "t3_" + $scope.items[$scope.items.length - 1]._id;
@@ -209,18 +202,6 @@ app.controller('MainCtrl', function (Facebook, $scope, $rootScope, $http, $locat
     };
 });
 
-app.controller('EventDetailController', function($scope, $routeParams) {
-    $scope.eid = $routeParams.eid;
+app.controller('EventDetailController', function($scope, $routeParams, eventStorage) {
+    $scope.event = eventStorage.get($routeParams.eid);
 });
-
-app.controller('DemoController', function($scope) {
-  $scope.images = [1, 2, 3, 4, 5, 6, 7, 8];
-
-  $scope.loadMore = function() {
-    var last = $scope.images[$scope.images.length - 1];
-    for(var i = 1; i <= 8; i++) {
-      $scope.images.push(last + i);
-    }
-  };
-});
-

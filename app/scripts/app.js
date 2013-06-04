@@ -1,24 +1,24 @@
 'use strict';
 
-var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll', 'ui.state'])
-  .config(function ($routeProvider) {
+var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll'])
+.config(function ($routeProvider) {
     $routeProvider
-      .when('/', {
+    .when('/', {
         templateUrl: 'views/main.html',
         controller: 'MainCtrl'
-      })
-      .when('/event/:eid', {
+    })
+    .when('/event/:eid', {
         templateUrl: 'views/event.html',
         controller: 'EventDetailController'
-      })
-      .when('/tlogin', {
+    })
+    .when('/tlogin', {
         templateUrl: 'views/tlogin.html',
         controller: 'MainCtrl'
-      })
-      .otherwise({
+    })
+    .otherwise({
         redirectTo: '/'
-      });
-  });
+    });
+});
 
 app.run(function ($rootScope) {
     console.log('app.run');
@@ -34,9 +34,9 @@ app.run(function ($rootScope) {
 
         console.log('window.fbAsyncInit a1');
         FB.getLoginStatus(function (response) {
-                console.log('window.fbAsyncInit a2 ' + response.status);
-                $rootScope.$broadcast("fb_statusChange", {'status':response.status});
-            }, true);
+            console.log('window.fbAsyncInit a2 ' + response.status);
+            $rootScope.$broadcast("fb_statusChange", {'status':response.status});
+        }, true);
         console.log('window.fbAsyncInit a3');
     };
 
@@ -56,5 +56,5 @@ app.run(function ($rootScope) {
     FB.Event.subscribe('auth.statusChange', function(response) {
         $rootScope.$broadcast("fb_statusChange", {'status': response.status});
     });
-	*/
+*/
 });

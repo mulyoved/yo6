@@ -11,25 +11,25 @@
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li class="divider-vertical"></li>
-					<li><a href="#"><i class="icon-calendar icon-white"></i> Today<i class="caret"></i></a></li>
+					<li><a href=""><i class="icon-calendar icon-white"></i> {{filterValues.date}}<i class="caret"></i></a></li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-							<i class="icon-time icon-white"></i> {{events_time}}<i class="caret"></i>
+							<i class="icon-time icon-white"></i> {{filterValues.time}}<i class="caret"></i>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="#" ng-click="events_time = 'All Day'">All Day</a></li>
-							<li><a href="#" ng-click="events_time = 'Morning'">Morning</a></li>
-							<li><a href="#" ng-click="events_time = 'Afternoon'">Afternoon</a></li>
-							<li><a href="#" ng-click="events_time = 'Evening'">Evening</a></li>
-							<li><a href="#" ng-click="setEventsTime('Night')">Night</a></li>
+							<li><a href="" ng-click="setEventsTime('All Day')">All Day</a></li>
+							<li><a href="" ng-click="setEventsTime('Morning')">Morning</a></li>
+							<li><a href="" ng-click="setEventsTime('Afternoon')">Afternoon</a></li>
+							<li><a href="" ng-click="setEventsTime('Evening')">Evening</a></li>
+							<li><a href="" ng-click="setEventsTime('Night')">Night</a></li>
 						</ul>
 					</li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
-							<i class="icon-map-marker icon-white"></i> {{events_location}}<i class="caret"></i>
+							<i class="icon-map-marker icon-white"></i> {{filterValues.location}}<i class="caret"></i>
 						</a>
 						<ul class="dropdown-menu">
-							<li><a href="#"><i class="icon-screenshot"></i> Locate Me</a></li>
+							<li><a href=""><i class="icon-screenshot"></i> Locate Me</a></li>
 						</ul>
 					</li>
 
@@ -43,8 +43,8 @@
 				<div class="pull-right">
 					<ul class="nav pull-right">
 						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown" ng-click="isCollapsed = !isCollapsed">
-								Welcome, User <b class="caret"></b>
+							<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-click="isCollapsed = !isCollapsed">
+								{{username}}<b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>

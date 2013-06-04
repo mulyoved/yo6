@@ -1,2 +1,21 @@
-<h1>Event Detail</h1>
-<div>{{eid}}</div>
+<div ng-include="'views/includes/toolbar.html'"></div>
+<div ng-controller='EventDetailController' class="row">
+	<div class="span9 well">
+		<div>Version 1.0</div>
+		<div>Name: {{event.name}}</div>
+		<div>Host: {{event.host}}</div>
+		<div ng-show="false">Description: {{event.description}}</div>
+		<div>Location: {{event.location}}</div>
+		<img ng-src="{{event.pic}}"/>
+		<img ng-show="false" ng-src="{{event.pic_cover.source}}"/>
+		<!--
+		<img ng-src="{{event.pic_big}}">
+		<img ng-src="{{event.pic_small}}">
+		<img ng-src="{{event.pic_square}}">
+		-->
+		<div>Start Time: {{event.start_time}}</div>
+		<div ng-show="event.ticket_url">Tickset URL: <a ng-href="{{event.ticket_url}}">Buy Tickets</a></div>
+	</div>
+</div>
+
+
