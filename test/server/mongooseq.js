@@ -134,6 +134,50 @@ describe('Mongoose Q', function() {
 			console.log('Found %d events', ret.length);
 			done();
 		});
+
+		it('Query fbEvent Page', function(done) {
+			var page = 4;
+			var pageSize = 10;
+			var from = pageSize * page;
+
+			fbEvent
+			.find()
+			.skip(from)
+			.limit(pageSize)
+			.execQ()
+			.then(function(users) {
+				if (users) {
+					console.log('Page %d Found %d events', page, users.length);
+				}
+				else {
+					console.log('events not found');
+				}
+			})
+			.fail(reportError)
+			.fin(done)
+			.done();
+		});
+
+		it('Query fbEvent One eid', function(done) {
+			var eid = 507504645963362;
+
+			fbEvent
+			.findOne({eid: eid})
+			.execQ()
+			.then(function(e) {
+				if (e) {
+					console.log('Event found %s %s', e.eid, e.name);
+				}
+				else {
+					console.log('events not found');
+				}
+			})
+			.fail(reportError)
+			.fin(done)
+			.done();
+
+		});
+
 	});
 });
 

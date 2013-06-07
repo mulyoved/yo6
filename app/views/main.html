@@ -8,7 +8,7 @@
 
 		<!-- <div ng-include="'views/includes/lernist_panel.html'"></div> -->
 		<div ng-controller='EventsController' class="row">
-			<div infinite-scroll='loadEvents()' infinite-scroll-disabled='busy' infinite-scroll-distance='1'>
+			<div infinite-scroll='eventStorage.loadNextPage()' infinite-scroll-disabled='eventStorage.busy' infinite-scroll-distance='1'>
 				<div ng-include="'views/includes/event_panel.html'"></div>
 				<div ng-show='busy'>Loading data...</div>
 			</div>

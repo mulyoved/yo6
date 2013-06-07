@@ -1,4 +1,7 @@
-<div ng-include="'views/includes/toolbar.html'"></div>
+<div toptoolbar 
+	brand="{{brand}}" 
+	username="{{userName}}">
+</div>
 <div ng-controller='EventDetailController' class="row">
 	<div class="span9 well">
 		<div>Version 1.0</div>
@@ -16,6 +19,8 @@
 		<div>Start Time: {{event.start_time}}</div>
 		<div ng-show="event.ticket_url">Tickset URL: <a ng-href="{{event.ticket_url}}">Buy Tickets</a></div>
 	</div>
+</div>
+</div>
 </div>
 
 

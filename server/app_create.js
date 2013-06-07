@@ -9,6 +9,7 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , auth = require('./routes/auth')
+  , events = require('./routes/events')
   , http = require('http')
   , path = require('path');
 
@@ -41,6 +42,9 @@ app.get('/', appIndex);
 app.post('/auth/session', auth.session);
 app.post('/auth/login', auth.login);
 app.post('/auth/logout', auth.logout);
+app.get('/event/:eid', events.eventOne);
+app.get('/events/:page', events.eventsPage);
+
 app.get('*', appIndex);
 
 var server = http.createServer(app);

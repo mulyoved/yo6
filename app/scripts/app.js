@@ -22,6 +22,15 @@ var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll'])
 
 app.run(function ($rootScope) {
     console.log('app.run');
+
+    $rootScope.config = {
+        brand: 'Evnt7x24',
+        useMockup: true,
+    };
+
+    //I don't understand why the toolbar.html template cannot access config.brand
+    $rootScope.brand = $rootScope.config.brand;
+
     window.fbAsyncInit = function () {
         console.log('window.fbAsyncInit');
 
