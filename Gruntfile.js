@@ -151,7 +151,8 @@ module.exports = function (grunt) {
         cssDir: '.tmp/styles',
         imagesDir: '<%= yeoman.app %>/images',
         javascriptsDir: '<%= yeoman.app %>/scripts',
-        fontsDir: '<%= yeoman.app %>/styles/fonts',
+        //fontsDir: '<%= yeoman.app %>/styles/fonts',
+        fontsDir: 'styles/fonts',
         importPath: '<%= yeoman.app %>/components',
         relativeAssets: true
       },
@@ -286,7 +287,7 @@ module.exports = function (grunt) {
   grunt.registerTask('server', [
     'clean:server',
     'coffee:dist',
-    //'compass:server',
+    'compass:server',
     'livereload-start',
     //'connect:livereload',
     'express:server',
@@ -297,7 +298,7 @@ module.exports = function (grunt) {
   grunt.registerTask('serverAng', [
     'clean:server',
     'coffee:dist',
-    //'compass:server',
+    'compass:server',
     'livereload-start',
     'connect:livereload',
     //'express:server',
@@ -308,7 +309,7 @@ module.exports = function (grunt) {
   grunt.registerTask('test', [
     'clean:server',
     'coffee',
-    //'compass',
+    'compass',
     'connect:test',
     'karma'
   ]);
@@ -318,7 +319,7 @@ module.exports = function (grunt) {
     'jshint',
     'test',
     'coffee',
-    //'compass:dist',
+    'compass:dist',
     'useminPrepare',
     'imagemin',
     'cssmin',
