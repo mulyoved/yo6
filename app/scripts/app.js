@@ -20,7 +20,7 @@ var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll'])
     });
 });
 
-app.run(function ($rootScope) {
+app.run(function ($rootScope, autentication) {
     console.log('app.run');
 
     $rootScope.config = {
@@ -30,40 +30,5 @@ app.run(function ($rootScope) {
 
     //I don't understand why the toolbar.html template cannot access config.brand
     $rootScope.brand = $rootScope.config.brand;
-
-    window.fbAsyncInit = function () {
-        console.log('window.fbAsyncInit');
-
-        FB.init({
-            appId:'193911810758167',
-            status:true,
-            cookie:true,
-            xfbml:true
-        });
-
-        console.log('window.fbAsyncInit a1');
-        FB.getLoginStatus(function (response) {
-            console.log('window.fbAsyncInit a2 ' + response.status);
-            $rootScope.$broadcast("fb_statusChange", {'status':response.status});
-        }, true);
-        console.log('window.fbAsyncInit a3');
-    };
-
-    (function (d) {
-        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-        if (d.getElementById(id)) {
-            return;
-        }
-        js = d.createElement('script');
-        js.id = id;
-        js.async = true;
-        js.src = "//connect.facebook.net/en_US/all.js";
-        ref.parentNode.insertBefore(js, ref);
-    }(document));
-
-	/*
-    FB.Event.subscribe('auth.statusChange', function(response) {
-        $rootScope.$broadcast("fb_statusChange", {'status': response.status});
-    });
-*/
+    autentication.init();
 });

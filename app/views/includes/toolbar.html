@@ -44,14 +44,14 @@
 					<ul class="nav pull-right">
 						<li class="dropdown">
 							<a href="" class="dropdown-toggle" data-toggle="dropdown" ng-click="isCollapsed = !isCollapsed">
-								{{username}}<b class="caret"></b>
+								{{autentication.userName()}}<b class="caret"></b>
 							</a>
 							<ul class="dropdown-menu">
 								<li><a href="/user/preferences"><i class="icon-cog"></i> Preferences</a></li>
 								<li><a href="/help/support"><i class="icon-envelope"></i> Contact Support</a></li>
 								<li><a href="/help/about"><i class="icon-info-sign"></i> About</a></li>
 								<li class="divider"></li>
-								<li><a href="#" ng-click="logout()"><i class="icon-off"></i> Logout</a></li>
+								<li><a href="#" ng-click="autentication.logout()"><i class="icon-off"></i> Logout</a></li>
 							</ul>
 						</li>
 					</ul>

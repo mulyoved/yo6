@@ -135,7 +135,7 @@ describe('fbgraph', function(){
 					var uid2 = user_friends[i].uid2;
 					user.friends.push(uid2);
 
-					if (Object.keys(query2).length >= 20) {
+					if (Object.keys(query2).length >= 10) {
 						promiseArray.push(qFql(query2));
 						var query2 = {};
 					}
@@ -158,13 +158,18 @@ describe('fbgraph', function(){
 				var len = answer.length;
 				for (var i = 2; i < len; i++) {
 					var batchData = answer[i].data;
-					var lenData = batchData.length;
-					for (var j = 0; j < lenData; j++) {
-						var data = batchData[j];
-						var uid = data.name;
-						var user_events = data.fql_result_set;
+					if (batchData) {
+						var lenData = batchData.length;
+						for (var j = 0; j < lenData; j++) {
+							var data = batchData[j];
+							var uid = data.name;
+							var user_events = data.fql_result_set;
 
-						promiseArray.push(saveEvents(user_events));
+							promiseArray.push(saveEvents(user_events));
+						}
+					}
+					else {
+						console.error('Step2: BatchData is null %d %s', i, inspect(answer[i]));
 					}
 				}
 

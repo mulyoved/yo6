@@ -63,7 +63,13 @@ function fql(done, select, compare) {
         console.log("Result: %s", inspect(res));
       }
 
+      if (!res) {
+        console.log("Select: %s", select);
+        console.error("Error Result = null");
+        assert(false, format("FQL Return Null"));
+      }
       if (res['error']) {
+        console.log("Select: %s", select);
         console.error("Error Result: %s", inspect(res));
         assert(false, format("FQL Return Error: %s", res['error']['message']));
       }
@@ -159,7 +165,7 @@ describe('fbgraph', function(){
     });
 
     it('get friend events', function(done) {
-      fql(done, "SELECT eid FROM event_member WHERE uid = '100003980499676'",compareList,1,'eid')
+      fql(done, "SELECT eid FROM event_member WHERE uid = '674697303'",compareList,1,'eid')
     });
 
     it('get all friend events id', function(done) {
