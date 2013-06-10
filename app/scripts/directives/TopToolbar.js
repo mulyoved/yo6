@@ -10,8 +10,8 @@ angular.module('yo6App')
 		restrict: 'A',
 		templateUrl: 'views/includes/toolbar.html',
 		scope: {
-			brand: "@",
-			username: "@"
+			brand: '@',
+			username: '@'
 		},
 		controller: function TopToolbarControler($scope, $rootScope, eventsFilterParams, autentication) {
 			$scope.isCollapsed = false;
@@ -21,8 +21,8 @@ angular.module('yo6App')
 			$scope.setEventsTime = function (time) {
 				console.log('setEventsTime, ' + time);
 				eventsFilterParams.values.time = time;
-				$rootScope.$broadcast("eventsFilterParams.values", { values: eventsFilterParams.values});
-			}
+				$rootScope.$broadcast('eventsFilterParams.values', { values: eventsFilterParams.values});
+			};
 		}
 	};
 });

@@ -1,12 +1,14 @@
-var util = require('util');
-var inspect = util.inspect;
+'use strict';
+
+//var util = require('util');
+//var inspect = util.inspect;
 
 var mongoose = require('../../server/node_modules/mongoose-q')();
-if (mongoose.modelNames().length == 0) {
+if (mongoose.modelNames().length === 0) {
 	var db = require('../../server/models/db');
 }
-var User = mongoose.model('User');
-var fbUser = mongoose.model('fbUser');
+//var User = mongoose.model('User');
+//var fbUser = mongoose.model('fbUser');
 var fbEvent = mongoose.model('fbEvent');
 
 function reportError(err) {
@@ -25,7 +27,7 @@ exports.eventOne = function(req, res) {
 	})
 	.fail(reportError)
 	.done();
-}
+};
 
 exports.eventsPage = function(req, res) {
 	var page = req.params.page;
@@ -44,5 +46,5 @@ exports.eventsPage = function(req, res) {
 	})
 	.fail(reportError)
 	.done();
-}
+};
 

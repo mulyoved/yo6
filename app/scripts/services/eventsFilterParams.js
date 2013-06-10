@@ -9,5 +9,5 @@ angular.module('yo6App')
 				location: 'Tel-Aviv, Israel',
 				search: ''
 			}
-		}
+		};
 	});

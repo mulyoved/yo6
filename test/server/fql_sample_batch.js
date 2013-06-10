@@ -135,6 +135,7 @@ describe('fbgraph', function(){
 					var uid2 = user_friends[i].uid2;
 					user.friends.push(uid2);
 
+					// was 20 but got unknown error in 1 batch
 					if (Object.keys(query2).length >= 10) {
 						promiseArray.push(qFql(query2));
 						var query2 = {};

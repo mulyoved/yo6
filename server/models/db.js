@@ -1,3 +1,5 @@
+'use strict';
+
 console.log('start db.js');
 var mongoose = require( 'mongoose' );
 var Mixed = mongoose.Schema.Types.Mixed;
@@ -16,7 +18,7 @@ var userSchema = new mongoose.Schema({
 	logout: { type: Date, default: '' },
 	created: { type: Date, default: Date.now },
 	testCounter: Number
-}, 
+},
 { versionKey: false });
 
 mongoose.model( 'User', userSchema );
@@ -69,7 +71,7 @@ var fbUserSchema = new mongoose.Schema({
 	uid: Number,
 	username: String,
 	friends: [Number]
-}, 
+},
 { versionKey: false });
 
 mongoose.model( 'fbUser', fbUserSchema );
@@ -110,7 +112,7 @@ var fbEvent = new mongoose.Schema({
 	update_time: String,
 	venue: Location,
 	version: Number,
-}, 
+},
 { versionKey: false });
 
 

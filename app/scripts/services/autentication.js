@@ -3,7 +3,7 @@
 angular.module('yo6App')
 .factory('autentication', function (Facebook, $rootScope, $http) {
 	$rootScope.isLoggedin = false;
-	var info;
+	//var info;
 	var userID;
 	var userName = 'User';
 
@@ -27,7 +27,7 @@ angular.module('yo6App')
 				console.log('window.fbAsyncInit a1');
 				FB.getLoginStatus(function (response) {
 					console.log('window.fbAsyncInit a2 ' + response.status);
-					$rootScope.$broadcast("fb_statusChange", {'status':response.status});
+					$rootScope.$broadcast('fb_statusChange', {'status':response.status});
 				}, true);
 				console.log('window.fbAsyncInit a3');
 			};
@@ -40,18 +40,18 @@ angular.module('yo6App')
 				js = d.createElement('script');
 				js.id = id;
 				js.async = true;
-				js.src = "//connect.facebook.net/en_US/all.js";
+				js.src = '//connect.facebook.net/en_US/all.js';
 				ref.parentNode.insertBefore(js, ref);
 			}(document));
 		},
 
 		updateSession: function () {
 			//reads the session variables if exist from php
-			console.log("updateSession Going to Req");
+			console.log('updateSession Going to Req');
 			$http.post('auth/session').success(function (data) {
 				//and transfers them to angular
 
-				console.log("updateSession Res:");
+				console.log('updateSession Res:');
 				console.log(data);
 				$rootScope.session = data;
 			});
@@ -71,7 +71,7 @@ angular.module('yo6App')
 			Facebook.logout();
 			$rootScope.session = {};
 			//make a call to a php page that will erase the session data
-			$http.post("auth/logout", { 'userID': userID });
+			$http.post('auth/logout', { 'userID': userID });
 		},
 		unsubscribe: function () {
 			Facebook.unsubscribe();
@@ -80,19 +80,19 @@ angular.module('yo6App')
 			FB.api('/' + $rootScope.session.facebook_id, function (response) {
 				console.log('Good to see you, ' + response.name + '.');
 			});
-			services.info = $rootScope.session;
+			//service.info = $rootScope.session;
 		}
 	};
 
 
-	$rootScope.$on("fb_statusChange", function (event, args) {
+	$rootScope.$on('fb_statusChange', function (event, args) {
 		$rootScope.fb_status = args.status;
-		$rootScope.isLoggedin = args.status == 'connected';
+		$rootScope.isLoggedin = args.status === 'connected';
 		if (!$rootScope.isLoggedin) {
 			userID = '';
 		}
 
-		console.log("onfb_statusChange %s", args.status);
+		console.log('onfb_statusChange %s', args.status);
 
 		FB.api('/me', function(response) {
 			userName = response.name;
@@ -100,26 +100,26 @@ angular.module('yo6App')
 			$rootScope.$apply();
 		});
 	});
-	$rootScope.$on("fb_get_login_status", function () {
-		console.log("on fb_get_login_status");
+	$rootScope.$on('fb_get_login_status', function () {
+		console.log('on fb_get_login_status');
 		Facebook.getLoginStatus();
 	});
-	$rootScope.$on("fb_login_failed", function () {
-		console.log("fb_login_failed");
+	$rootScope.$on('fb_login_failed', function () {
+		console.log('fb_login_failed');
 		Facebook.getLoginStatus();
 	});
-	$rootScope.$on("fb_logout_succeded", function () {
-		console.log("fb_logout_succeded");
+	$rootScope.$on('fb_logout_succeded', function () {
+		console.log('fb_logout_succeded');
 		Facebook.getLoginStatus();
-		$rootScope.id = "";
+		$rootScope.id = '';
 	});
-	$rootScope.$on("fb_logout_failed", function () {
-		console.log("fb_logout_failed!");
+	$rootScope.$on('fb_logout_failed', function () {
+		console.log('fb_logout_failed!');
 		Facebook.getLoginStatus();
 	});
 
-	$rootScope.$on("fb_connected", function (event, args) {
-		console.log("fb_connected event");
+	$rootScope.$on('fb_connected', function (event, args) {
+		console.log('fb_connected event');
 		/*
 		 If facebook is connected we can follow two paths:
 		 The users has either authorized our app or not.
@@ -141,12 +141,11 @@ angular.module('yo6App')
 		 connect and to get some extra data we might need to unthenticated him.
 		 */
 
-		 var params = {};
+		var params = {};
 
-		 function authenticateViaFacebook(parameters) {
+		function authenticateViaFacebook(parameters) {
 			//posts some user data to a page that will check them against some db
 			$http.post('auth/login', parameters).success(function () {
-				$scope.updateSession();
 			});
 		}
 
@@ -154,7 +153,7 @@ angular.module('yo6App')
 			//if the user has not authorized the app, we must write his credentials in our database
 
 			//findme: mulyoved, I don't understand this how we can not authorized? maybe if user does not give permmisions?
-			console.log("user is connected to facebook but has not authorized our app, not sure what to do with this");
+			console.log('user is connected to facebook but has not authorized our app, not sure what to do with this');
 			userID = '';
 
 			/*
@@ -177,20 +176,19 @@ angular.module('yo6App')
 					authenticateViaFacebook(params);
 				});
 */
-}
-else {
-	console.log("user is connected to facebook and has authorized our app: %s curent user (%s)", args.facebook_id.userID, userID);
-	if (userID != args.facebook_id.userID) {
-		console.log(args.facebook_id);
-		params = args.facebook_id;
-		console.log("send server the user info: " + params.userID);
-		authenticateViaFacebook(params);
-		userID = args.facebook_id.userID;
-		console.log("After Send to server %s curent user (%s)", args.facebook_id.userID, userID);
-	}
-}
+		}
+		else {
+			console.log('user is connected to facebook and has authorized our app: %s curent user (%s)', args.facebook_id.userID, userID);
+			if (userID !== args.facebook_id.userID) {
+				console.log(args.facebook_id);
+				params = args.facebook_id;
+				console.log('send server the user info: ' + params.userID);
+				authenticateViaFacebook(params);
+				userID = args.facebook_id.userID;
+				console.log('After Send to server %s curent user (%s)', args.facebook_id.userID, userID);
+			}
+		}
+	});
 
-});
-
-return service;
+	return service;
 });

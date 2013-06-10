@@ -13,11 +13,11 @@ app.controller('MainCtrl', function (Facebook, $scope, $rootScope, $location, au
 	
 	$scope.autentication = autentication;
 })
-.controller('EventsController', function($scope, $rootScope, eventStorage, eventsFilterParams) {
+.controller('EventsController', function($scope, $rootScope, eventStorage) {
 	console.log('EventsController');
 	$scope.eventStorage = eventStorage;
 
-	$rootScope.$on("eventsFilterParams.values", function (event, args) {
+	$rootScope.$on('eventsFilterParams.values', function (event, args) {
 		console.log('eventsFilterParams.values');
 		
 		eventStorage.setFilter(args.values);

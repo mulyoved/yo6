@@ -52,7 +52,7 @@ module.exports = function (grunt) {
           bases: path.resolve('./app'),
           monitor: {},
           debug: true,
-          server: path.resolve('./server/app_create'),
+          server: path.resolve('./server/app'),
           middleware: function (connect) {
             return [
               lrSnippet,
@@ -316,7 +316,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('build', [
     'clean:dist',
-    'jshint',
+    //'jshint',
     'test',
     'coffee',
     'compass:dist',

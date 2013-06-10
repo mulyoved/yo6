@@ -1,10 +1,10 @@
 'use strict';
 
 angular.module('yo6App')
-.factory('eventStorage', function ($rootScope, $http, eventsFilterParams) {
-	var mockup_url = "mockup/fbevents_sample.json";
-	var getOne_url = "/event/";
-	var getPage_url = "/events/";
+.factory('eventStorage', function ($rootScope, $http) {
+	var mockupUrl = 'mockup/fbevents_sample.json';
+	var getOneUrl = '/event/';
+	var getPageUrl = '/events/';
 	var nextPage = 0;
 	var filterValues = {};
 	var itemStorage = {};
@@ -19,13 +19,13 @@ angular.module('yo6App')
 			}
 			else {
 				if ($rootScope.config.useMockup) {
-					return $http.get(mockup_url)
+					return $http.get(mockupUrl)
 					.then(function(data) {
 						console.log('get one json - success: %s %s', eid,data);
 						var newItems = data.data;
 						for (var i = 0; i < newItems.length; i++) {
 							console.log('search one json - success: %s', newItems[i].eid);
-							if (newItems[i].eid == eid) {
+							if (newItems[i].eid === eid) {
 								add(newItems[i]);
 								return newItems[i];
 							}
@@ -33,7 +33,7 @@ angular.module('yo6App')
 					});
 				}
 				else {
-					return $http.get(getOne_url+eid)
+					return $http.get(getOneUrl+eid)
 					.then(function(data) {
 						console.log('get one json - success: %s %s', eid,data.data);
 						var newItems = data.data;
@@ -50,17 +50,17 @@ angular.module('yo6App')
 		loadNextPage: function() {
 			if (!$rootScope.config.useMockup || service.items.length < 30) {
 				console.log('load next page %s', service.items.length);
-				if (service.busy) return;
+				if (service.busy) { return; }
 				service.busy = true;
 
-				//var url = "http://api.reddit.com/hot?after=" + $scope.after + "&jsonp=JSON_CALLBACK";
+				//var url = 'http://api.reddit.com/hot?after=' + $scope.after + '&jsonp=JSON_CALLBACK';
 
 				var url;
 				if ($rootScope.config.useMockup) {
-					url = mockup_url;
+					url = mockupUrl;
 				}
 				else {
-					url = getPage_url+nextPage;
+					url = getPageUrl+nextPage;
 				}
 
 
@@ -72,7 +72,7 @@ angular.module('yo6App')
 						add(newItems[i]);
 						service.items.push(newItems[i]);
 					}
-					//$scope.after = "t3_" + $scope.items[$scope.items.length - 1]._id;
+					//$scope.after = 't3_' + $scope.items[$scope.items.length - 1]._id;
 					service.busy = false;
 					nextPage++;
 				})
@@ -94,6 +94,6 @@ angular.module('yo6App')
 
 	function add(event) {
 		itemStorage[event.eid] = event;
-	};
+	}
 	return service;
 });
