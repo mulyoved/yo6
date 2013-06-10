@@ -3,9 +3,9 @@
 //var util = require('util');
 //var inspect = util.inspect;
 
-var mongoose = require('../../server/node_modules/mongoose-q')();
+var mongoose = require('mongoose-q')();
 if (mongoose.modelNames().length === 0) {
-	var db = require('../../server/models/db');
+	var db = require('models/db');
 }
 //var User = mongoose.model('User');
 //var fbUser = mongoose.model('fbUser');

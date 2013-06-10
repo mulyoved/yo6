@@ -7,7 +7,7 @@ var userFields = 'affiliations,age_range,current_location,first_name,friend_coun
 
 
 var assert = require("assert");
-var graph = require('../../server/node_modules/fbgraph');
+var graph = require('fbgraph');
 var format = require('util').format;
 var inspect = require('util').inspect;
 

@@ -3,7 +3,7 @@
 var FBConfig = require("./fb_config").facebook;
 
 var assert = require("assert");
-var graph = require('../../server/node_modules/fbgraph');
+var graph = require('fbgraph');
 var format = require('util').format;
 var inspect = require('util').inspect;
 

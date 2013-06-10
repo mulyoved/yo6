@@ -7,14 +7,14 @@ var userFields = 'affiliations,age_range,current_location,first_name,friend_coun
 
 
 var assert = require("assert");
-var graph = require('../../server/node_modules/fbgraph');
+var graph = require('fbgraph');
 var format = require('util').format;
 var inspect = require('util').inspect;
 var Q = require('../../server/node_modules/q');
 
-var mongoose = require('../../server/node_modules/mongoose-q')();
+var mongoose = require('mongoose-q')();
 if (mongoose.modelNames().length == 0) {
-	var db = require('../../server/models/db');
+	var db = require('../../models/db');
 }
 var User = mongoose.model('User');
 var fbUser = mongoose.model('fbUser');

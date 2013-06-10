@@ -3,9 +3,9 @@
 var assert = require("assert")
 var inspect = require('util').inspect;
 
-var mongoose = require('../../server/node_modules/mongoose');
+var mongoose = require('mongoose');
 if (mongoose.modelNames().length == 0) {
-	var db = require('../../server/models/db');
+	var db = require('../../models/db');
 }
 var User = mongoose.model('User');
 var fbUser = mongoose.model('fbUser');

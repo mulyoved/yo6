@@ -17,3 +17,4 @@ mongodb service name mongodb-d2320
 
 https://devcenter.heroku.com/articles/nodejs#prerequisites
 /d/Program\ Files/Heroku/bin/heroku
+git push heroku master

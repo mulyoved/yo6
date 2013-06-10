@@ -2,6 +2,12 @@
 	"name": "yo6",
 	"version": "0.0.0",
 	"dependencies": {
+		"express": "3.2.4",
+		"ejs": "*",
+		"mongoose": "~3.6.11",
+		"fbgraph": "~0.2.6",
+		"q": "~0.9.4",
+		"mongoose-q": "0.0.4"
 	},
 	"devDependencies": {
 		"grunt": "~0.4.1",

@@ -29,21 +29,21 @@ app.use(express.methodOverride());
 app.use(express.cookieParser('your secret here'));
 app.use(express.session());
 app.use(app.router);
-app.use(express.static(path.join(__dirname, '../.tmp')));
+app.use(express.static(path.join(__dirname, '.tmp')));
 
 // development only
 if ('development' === app.get('env')) {
 	console.log('Start server in development mode');
 	app.use(express.errorHandler());
-	app.use(express.static(path.join(__dirname, '../app')));
+	app.use(express.static(path.join(__dirname, 'app')));
 }
 else {
 	console.log('Start server in dist mode');
-	app.use(express.static(path.join(__dirname, '../dist')));
+	app.use(express.static(path.join(__dirname, 'dist')));
 }
 
 
-var appIndex = express.static(path.join(__dirname, '../app/index.html'));
+var appIndex = express.static(path.join(__dirname, 'app/index.html'));
 app.get('/', appIndex);
 app.post('/auth/session', auth.session);
 app.post('/auth/login', auth.login);

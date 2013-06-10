@@ -3,8 +3,8 @@
 var assert = require("assert")
 
 describe('Mongoose Connection', function(){
-  var db = require('../../server/models/db');
-  var mongoose = require('../../server/node_modules/mongoose');
+  var db = require('../../models/db');
+  var mongoose = require('mongoose');
   var User = mongoose.model('User');
 
   var u = {
