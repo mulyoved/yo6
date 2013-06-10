@@ -39,7 +39,9 @@ if ('development' === app.get('env')) {
 }
 else {
 	console.log('Start server in dist mode');
-	app.use(express.static(path.join(__dirname, 'dist')));
+	//app.use(express.static(path.join(__dirname, 'dist')));
+	app.use(express.errorHandler());
+	app.use(express.static(path.join(__dirname, 'app')));
 }
 
 
