@@ -121,7 +121,12 @@ mongoose.model( 'fbEvent', fbEvent );
 
 //Connect
 console.log('call  mongoose.connect');
-mongoose.connect( 'mongodb://localhost/yo6' );
+
+var mongoUri = process.env.MONGOLAB_URI ||
+  process.env.MONGOHQ_URL ||
+  'mongodb://localhost/yo6';
+
+mongoose.connect( mongoUri );
 var db = mongoose.connection;
 
 db.on('error', function onError(err) {
