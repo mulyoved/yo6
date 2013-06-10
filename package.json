@@ -36,7 +36,7 @@
 		"grunt-express": "~0.3.5"
 	},
 	"scripts": {
- 	   "postinstall": "sh -c './node_modules/bower/bin/bower install' && sh -c './node_modules/grunt-cli/bin/grunt'"
+ 	   "postinstall": "sh -c './node_modules/bower/bin/bower install'"
 	},
 	"devDependencies": {
 		"grunt": "~0.4.1",
