@@ -7,3 +7,13 @@ mocha ./test/server/
 
 nodebug C:/Users/Muly/AppData/Roaming/npm/node_modules/mocha/bin/_mocha ./test/server/
 nodebug C:/Users/Muly/AppData/Roaming/npm/node_modules/mocha/bin/_mocha --timeout 1000000 ./test/server/fql_sample_batch.js
+
+
+//Deply - AppFog, failed
+yo6.eu01.aws.af.cm
+mongodb service name mongodb-d2320
+
+// Heroku Pass: Catch222
+
+https://devcenter.heroku.com/articles/nodejs#prerequisites
+/d/Program\ Files/Heroku/bin/heroku
