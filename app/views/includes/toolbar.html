@@ -10,8 +10,27 @@
 
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li class="divider-vertical"></li>
-					<li><a href=""><i class="icon-calendar icon-white"></i> {{eventsFilterParams.values.date}}<i class="caret"></i></a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
+							<i class="icon-filter icon-white"></i> Category<i class="caret"></i>
+						</a>
+
+						<ul class="dropdown-menu">
+							<li><a href="" ng-click="setEventsTime('All Day')">Music & Nightlife</a></li>
+							<li><a href="" ng-click="setEventsTime('Morning')">Art & Calture</a></li>
+							<li><a href="" ng-click="setEventsTime('Afternoon')">Style & Shopping</a></li>
+							<li><a href="" ng-click="setEventsTime('Evening')">Leisure & Sport</a></li>
+							<li><a href="" ng-click="setEventsTime('Night')">Kids & Family</a></li>
+							<li><a href="" ng-click="setEventsTime('Night')">Other</a></li>
+						</ul>
+
+					</li>
+
+					<li>
+						<a href="">
+							<i class="icon-calendar icon-white"></i> {{eventsFilterParams.values.date}}<i class="caret"></i>
+						</a>
+					</li>
 					<li class="dropdown">
 						<a class="dropdown-toggle" data-toggle="dropdown" href="#">
 							<i class="icon-time icon-white"></i> {{eventsFilterParams.values.time}}<i class="caret"></i>

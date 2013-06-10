@@ -25,10 +25,15 @@ app.run(function ($rootScope, autentication) {
 
     $rootScope.config = {
         brand: 'Evnt7x24',
+        debugMode: false,
         useMockup: true,
     };
 
     //I don't understand why the toolbar.html template cannot access config.brand
     $rootScope.brand = $rootScope.config.brand;
+    if ($rootScope.config.debugMode) {
+        $rootScope.isLoggedin = true;
+    }
+
     autentication.init();
 });

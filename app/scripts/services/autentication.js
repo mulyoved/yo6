@@ -2,46 +2,47 @@
 
 angular.module('yo6App')
 .factory('autentication', function (Facebook, $rootScope, $http) {
-	$rootScope.isLoggedin = true;
+	$rootScope.isLoggedin = false;
 	var info;
 	var userID;
+	var userName = 'User';
 
 	var service = {
 
 		userName: function() {
-			return "HardCoded";
+			return userName;
 		},
 
 		init: function() {
-		    window.fbAsyncInit = function () {
-		        console.log('window.fbAsyncInit');
+			window.fbAsyncInit = function () {
+				console.log('window.fbAsyncInit');
 
-		        FB.init({
-		            appId:'193911810758167',
-		            status:true,
-		            cookie:true,
-		            xfbml:true
-		        });
+				FB.init({
+					appId:'193911810758167',
+					status:true,
+					cookie:true,
+					xfbml:true
+				});
 
-		        console.log('window.fbAsyncInit a1');
-		        FB.getLoginStatus(function (response) {
-		            console.log('window.fbAsyncInit a2 ' + response.status);
-		            $rootScope.$broadcast("fb_statusChange", {'status':response.status});
-		        }, true);
-		        console.log('window.fbAsyncInit a3');
-		    };
+				console.log('window.fbAsyncInit a1');
+				FB.getLoginStatus(function (response) {
+					console.log('window.fbAsyncInit a2 ' + response.status);
+					$rootScope.$broadcast("fb_statusChange", {'status':response.status});
+				}, true);
+				console.log('window.fbAsyncInit a3');
+			};
 
-		    (function (d) {
-		        var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
-		        if (d.getElementById(id)) {
-		            return;
-		        }
-		        js = d.createElement('script');
-		        js.id = id;
-		        js.async = true;
-		        js.src = "//connect.facebook.net/en_US/all.js";
-		        ref.parentNode.insertBefore(js, ref);
-		    }(document));
+			(function (d) {
+				var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+				if (d.getElementById(id)) {
+					return;
+				}
+				js = d.createElement('script');
+				js.id = id;
+				js.async = true;
+				js.src = "//connect.facebook.net/en_US/all.js";
+				ref.parentNode.insertBefore(js, ref);
+			}(document));
 		},
 
 		updateSession: function () {
@@ -91,8 +92,13 @@ angular.module('yo6App')
 			userID = '';
 		}
 
-		console.log("onfb_statusChange");
-		$rootScope.$apply();
+		console.log("onfb_statusChange %s", args.status);
+
+		FB.api('/me', function(response) {
+			userName = response.name;
+			console.log('Good to see you, ' + response.name + '.');
+			$rootScope.$apply();
+		});
 	});
 	$rootScope.$on("fb_get_login_status", function () {
 		console.log("on fb_get_login_status");
@@ -135,9 +141,9 @@ angular.module('yo6App')
 		 connect and to get some extra data we might need to unthenticated him.
 		 */
 
-		var params = {};
+		 var params = {};
 
-		function authenticateViaFacebook(parameters) {
+		 function authenticateViaFacebook(parameters) {
 			//posts some user data to a page that will check them against some db
 			$http.post('auth/login', parameters).success(function () {
 				$scope.updateSession();
@@ -170,21 +176,21 @@ angular.module('yo6App')
 					}
 					authenticateViaFacebook(params);
 				});
-			*/
-		}
-		else {
-			console.log("user is connected to facebook and has authorized our app: %s curent user (%s)", args.facebook_id.userID, userID);
-			if (userID != args.facebook_id.userID) {
-				console.log(args.facebook_id);
-				params = args.facebook_id;
-				console.log("send server the user info: " + params.userID);
-				authenticateViaFacebook(params);
-				userID = args.facebook_id.userID;
-				console.log("After Send to server %s curent user (%s)", args.facebook_id.userID, userID);
-			}
-		}
+*/
+}
+else {
+	console.log("user is connected to facebook and has authorized our app: %s curent user (%s)", args.facebook_id.userID, userID);
+	if (userID != args.facebook_id.userID) {
+		console.log(args.facebook_id);
+		params = args.facebook_id;
+		console.log("send server the user info: " + params.userID);
+		authenticateViaFacebook(params);
+		userID = args.facebook_id.userID;
+		console.log("After Send to server %s curent user (%s)", args.facebook_id.userID, userID);
+	}
+}
 
-	});
+});
 
-	return service;
+return service;
 });
