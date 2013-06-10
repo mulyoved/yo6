@@ -52,7 +52,7 @@ module.exports = function (grunt) {
           bases: path.resolve('./app'),
           monitor: {},
           debug: true,
-          server: path.resolve('./server/app'),
+          server: path.resolve('./server/app_create'),
           middleware: function (connect) {
             return [
               lrSnippet,
