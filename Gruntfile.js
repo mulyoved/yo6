@@ -1,4 +1,5 @@
 'use strict';
+
 var path = require('path');
 var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
 var mountFolder = function (connect, dir) {
@@ -333,6 +334,24 @@ module.exports = function (grunt) {
     'usemin'
   ]);
 
+  grunt.registerTask('heroku', [
+    'clean:dist',
+    //'jshint',
+    //'test',
+    //'coffee',
+    'compass:dist',
+    'useminPrepare',
+    'imagemin',
+    'cssmin',
+    'htmlmin',
+    'concat',
+    'copy',
+    'cdnify',
+    'ngmin',
+    'uglify',
+    'rev',
+    'usemin'
+  ]);
+
   grunt.registerTask('default', ['build']);
-  grunt.registerTask('heroku',  ['build']);
 };
