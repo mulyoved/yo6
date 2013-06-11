@@ -28,10 +28,11 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '.tmp')));
 
-console.log('NODE_ENV = [%s]', app.get('NODE_ENV'));
+var nodeEnv = process.env.NODE_ENV || 'development';
+console.log('NODE_ENV = [%s]', nodeEnv);
 
 // development only
-if ('production' === app.get('NODE_ENV')) {
+if ('production' === nodeEnv) {
 	console.log('Start server in production mode');
 	app.use(express.errorHandler());
 	app.use(express.static(path.join(__dirname, 'dist')));

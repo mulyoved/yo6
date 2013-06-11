@@ -24,7 +24,7 @@ app.run(function ($rootScope, autentication) {
 	console.log('app.run');
 
 	var isProduction = '/* @echo NODE_ENV */' === 'production';
-	console.log('isProduction = [%s]', isProduction);
+	console.log('isProduction = [%s] [%s]', isProduction, '/* @echo NODE_ENV */');
 
 	if (isProduction) {
 		$rootScope.config = {
