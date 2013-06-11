@@ -17,9 +17,6 @@ var path = require('path');
 
 var app = express();
 
-// all environments
-app.set('port', process.env.VCAP_APP_PORT || 9000);
-
 //app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 app.use(express.favicon());

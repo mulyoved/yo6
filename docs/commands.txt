@@ -16,6 +16,8 @@ mongodb service name mongodb-d2320
 // Heroku Pass: Catch222
 
 https://devcenter.heroku.com/articles/nodejs#prerequisites
-/d/Program\ Files/Heroku/bin/heroku
+
+//Needed in order to use grunt
+heroku config:add BUILDPACK_URL=https://github.com/stephanmelzer/heroku-buildpack-nodejs-grunt-compass.git
 git push heroku master
 ps/logs

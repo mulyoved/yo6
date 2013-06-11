@@ -27,6 +27,7 @@ app.run(function ($rootScope, autentication) {
 		brand: 'Evnt7x24',
 		debugMode: false,
 		useMockup: true,
+		facebookAppId: '193911810758167'
 	};
 
 	//I don't understand why the toolbar.html template cannot access config.brand

@@ -18,10 +18,10 @@ angular.module('yo6App')
 				console.log('window.fbAsyncInit');
 
 				FB.init({
-					appId:'193911810758167',
-					status:true,
-					cookie:true,
-					xfbml:true
+					appId: $rootScope.config.facebookAppId,
+					status: true,
+					cookie: true,
+					xfbml: true
 				});
 
 				console.log('window.fbAsyncInit a1');
