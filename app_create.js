@@ -28,19 +28,19 @@ app.use(express.session());
 app.use(app.router);
 app.use(express.static(path.join(__dirname, '.tmp')));
 
+console.log('NODE_ENV = [%s]', app.get('NODE_ENV'));
+
 // development only
-if ('development' === app.get('env')) {
+if ('production' === app.get('NODE_ENV')) {
+	console.log('Start server in production mode');
+	app.use(express.errorHandler());
+	app.use(express.static(path.join(__dirname, 'dist')));
+}
+else {
 	console.log('Start server in development mode');
 	app.use(express.errorHandler());
 	app.use(express.static(path.join(__dirname, 'app')));
 }
-else {
-	console.log('Start server in dist mode');
-	//app.use(express.static(path.join(__dirname, 'dist')));
-	app.use(express.errorHandler());
-	app.use(express.static(path.join(__dirname, 'app')));
-}
-
 
 var appIndex = express.static(path.join(__dirname, 'app/index.html'));
 app.get('/', appIndex);

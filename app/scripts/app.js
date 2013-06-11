@@ -23,12 +23,25 @@ var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll'])
 app.run(function ($rootScope, autentication) {
 	console.log('app.run');
 
-	$rootScope.config = {
-		brand: 'Evnt7x24',
-		debugMode: false,
-		useMockup: true,
-		facebookAppId: '193911810758167'
-	};
+	var isProduction = '/* @echo NODE_ENV */' === 'production';
+	console.log('isProduction = [%s]', isProduction);
+
+	if (isProduction) {
+		$rootScope.config = {
+			brand: 'Evnt7x24',
+			debugMode: false,
+			useMockup: false,
+			facebookAppId: '181343322031434'
+		};
+	}
+	else {
+		$rootScope.config = {
+			brand: 'Evnt7x24',
+			debugMode: false,
+			useMockup: true,
+			facebookAppId: '193911810758167'
+		};
+	}
 
 	//I don't understand why the toolbar.html template cannot access config.brand
 	$rootScope.brand = $rootScope.config.brand;

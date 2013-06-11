@@ -288,11 +288,17 @@ module.exports = function (grunt) {
 				context : {
 					DEBUG: true
 				}
+			},
+			js : {
+				src : '<%= yeoman.dist %>/scripts/scripts.js',
+				dest : '<%= yeoman.dist %>/scripts/scripts.js'
 			}
 		}
 	});
 
 	grunt.renameTask('regarde', 'watch');
+
+	//grunt.registerTask('preprocess', [ 'preprocess' ]);
 
 	grunt.registerTask('server', [
 		'clean:server',
@@ -337,6 +343,7 @@ module.exports = function (grunt) {
 		'concat',
 		'copy',
 		'cdnify',
+		'preprocess',
 		'ngmin',
 		'uglify',
 		'rev',
@@ -356,6 +363,7 @@ module.exports = function (grunt) {
 		'concat',
 		'copy',
 		'cdnify',
+		'preprocess',
 		'ngmin',
 		'uglify',
 		'rev',
