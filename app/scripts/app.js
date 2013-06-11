@@ -33,7 +33,7 @@ app.run(function ($rootScope, autentication) {
 		$rootScope.config = {
 			brand: 'Evnt7x24',
 			debugMode: false,
-			useMockup: false,
+			useMockup: true,
 			facebookAppId: '181343322031434'
 		};
 	}
