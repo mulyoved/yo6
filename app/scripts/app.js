@@ -23,8 +23,11 @@ var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll'])
 app.run(function ($rootScope, autentication) {
 	console.log('app.run');
 
-	var isProduction = '/* @echo NODE_ENV */' === 'production';
-	console.log('isProduction = [%s] [%s]', isProduction, '/* @echo NODE_ENV */');
+	var nodeEnv = '/* @echo NODE_ENV */';
+	
+	// I don't understand but during grunt it seem to be development, I assume in local machine this is undefined
+	var isProduction = nodeEnv === 'production' || nodeEnv === 'development';
+	console.log('isProduction = [%s] [%s]', isProduction, nodeEnv);
 
 	if (isProduction) {
 		$rootScope.config = {

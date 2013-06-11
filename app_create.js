@@ -35,7 +35,9 @@ console.log('NODE_ENV = [%s]', nodeEnv);
 if ('production' === nodeEnv) {
 	console.log('Start server in production mode');
 	app.use(express.errorHandler());
-	app.use(express.static(path.join(__dirname, 'dist')));
+	//For now this seem not to find files
+	//app.use(express.static(path.join(__dirname, 'dist')));
+	app.use(express.static(path.join(__dirname, 'app')));
 }
 else {
 	console.log('Start server in development mode');
