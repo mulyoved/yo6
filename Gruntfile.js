@@ -203,8 +203,8 @@ module.exports = function (grunt) {
 			dist: {
 				files: {
 					'<%= yeoman.dist %>/styles/main.css': [
-						'.tmp/styles/{,*/}*.css',
-						'<%= yeoman.app %>/styles/{,*/}*.css'
+						'.tmp/styles/{,*/}*.css'
+						//'<%= yeoman.app %>/styles/{,*/}*.css'
 					]
 				}
 			}
@@ -225,7 +225,7 @@ module.exports = function (grunt) {
 				files: [{
 					expand: true,
 					cwd: '<%= yeoman.app %>',
-					src: ['*.html', 'views/*.html'],
+					src: ['*.html', 'views/*.html', 'views/includes/*.html'],
 					dest: '<%= yeoman.dist %>'
 				}]
 			}
@@ -338,9 +338,9 @@ module.exports = function (grunt) {
 		'compass:dist',
 		'useminPrepare',
 		'imagemin',
-		'cssmin',
+		'cssmin:dist',
 		'htmlmin',
-		'concat',
+		'concat:dist',
 		'copy',
 		'cdnify',
 		'preprocess',
@@ -358,9 +358,9 @@ module.exports = function (grunt) {
 		'compass:dist',
 		'useminPrepare',
 		'imagemin',
-		'cssmin',
+		'cssmin:dist',
 		'htmlmin',
-		'concat',
+		'concat:dist',
 		'copy',
 		'cdnify',
 		'preprocess',
