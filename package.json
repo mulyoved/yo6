@@ -33,7 +33,8 @@
     "grunt-google-cdn": "~0.1.1",
     "grunt-ngmin": "~0.0.2",
     "grunt-express": "~0.3.5",
-    "grunt-preprocess": "~2.3.0"
+    "grunt-preprocess": "~2.3.0",
+    "raven": "~0.5.1"
   },
   "scripts": {
     "postinstall": "sh -c './node_modules/bower/bin/bower install'"

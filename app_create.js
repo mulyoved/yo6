@@ -55,6 +55,8 @@ app.get('/events/:page', events.eventsPage);
 
 app.get('*', appIndex);
 
+app.error(raven.middleware.express('https://c4698c137bd0422f9f24635be2a5a90a:2b32df4f908b4ec98df2455b02d494f0@app.getsentry.com/9472'));
+
 var server = http.createServer(app);
 exports = module.exports = server;
 
