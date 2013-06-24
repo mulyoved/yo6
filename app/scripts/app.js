@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('yo6App', ['ui.bootstrap','infinite-scroll'])
+var app = angular.module('yo6App', ['infinite-scroll'])
 .config(function ($routeProvider) {
 	$routeProvider
 	.when('/', {

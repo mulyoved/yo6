@@ -7,12 +7,13 @@ basePath = '';
 files = [
   JASMINE,
   JASMINE_ADAPTER,
+  'app/components/jquery/jquery.js',
   'app/components/angular/angular.js',
   'app/components/angular-mocks/angular-mocks.js',
   'app/components/ngInfiniteScroll/ng-infinite-scroll.js',
   'app/scripts/*.js',
   'app/scripts/**/*.js',
-  'test/mock/**/*.js',
+  //'test/mock/**/*.js',
   'test/spec/**/*.js'
 ];
 

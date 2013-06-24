@@ -342,13 +342,17 @@ module.exports = function (grunt) {
 		'cssmin:dist',
 		'htmlmin',
 		'concat:dist',
-		'copy',
+		'copy:dist',
 		'cdnify',
 		'preprocess',
 		'ngmin',
 		'uglify',
 		'rev',
 		'usemin'
+	]);
+
+	grunt.registerTask('phonegap', [
+		'build'
 	]);
 
 	grunt.registerTask('heroku', [
@@ -362,7 +366,7 @@ module.exports = function (grunt) {
 		'cssmin:dist',
 		'htmlmin',
 		'concat:dist',
-		'copy',
+		'copy:dist',
 		'cdnify',
 		'preprocess',
 		'ngmin',
