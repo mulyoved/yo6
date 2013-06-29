@@ -21,3 +21,44 @@ https://devcenter.heroku.com/articles/nodejs#prerequisites
 heroku config:add BUILDPACK_URL=https://github.com/stephanmelzer/heroku-buildpack-nodejs-grunt-compass.git
 git push heroku master
 ps/logs
+
+//Android Create new project, must be from command line (not sh)
+d:\phonegap-2.8.1\phonegap-2.8.1\lib\android\bin\create.bat fbLoginSample fbLoginSample fbLoginSample
+
+//Start logcat
+//logcat -d connect usb, -c clean, -d dump and exit
+/d/phonegap-2.8.1/AndroidSDK/sdk/platform-tools/adb -d logcat -c
+/d/phonegap-2.8.1/AndroidSDK/sdk/platform-tools/adb -d logcat -d > log4
+
+/d/phonegap-2.8.1/AndroidSDK/sdk/platform-tools/adb logcat webkit CordovaWebView FirewallPolicy PhoneStatusBar WebView DroidGap webcore CordovaLog Web Console STATUSBAR-NetworkController
+
+/d/phonegap-2.8.1/AndroidSDK/sdk/platform-tools/adb logcat *:I
+ 
+
+
+/d/phonegap-2.8.1/AndroidSDK/sdk/platform-tools/adb shell
+
+//if you are a developer or want to re-enable logcat for whatever reason, do this: 
+//** I done this from the bootloader! and it seem to work
+adb shell 
+su 
+mount -o remount,rw /system 
+
+/d/phonegap-2.8.1/AndroidSDK/sdk/platform-tools/adb connect 127.0.0.1
+/d/phonegap-2.8.1/AndroidSDK/sdk/platform-tools/adb pull system/etc/init.d/S97WanamLite S97WanamLite
+/d/phonegap-2.8.1/AndroidSDK/sdk/platform-tools/adb push S97WanamLite system/etc/init.d/S97WanamLite
+
+//echo ANDROIDLOGGER >> /system/etc/tweaks.conf 
+mount -o remount,ro /system 
+
+Reboot and you should have it enabled.
+d > 
+cd /system/etc/init.d
+
+//Generate Android Keys for facebook
+/d/phonegap-2.8.1/jdk/bin/keytool -exportcert -alias androiddebugkey -keystore /c/Users/Muly/.android/debug.keystore  | openssl sha1 -binary | openssl base64
+
+password android
+
+//Build in PhoneGapBuild
+Need to unlock the code, password is android/android

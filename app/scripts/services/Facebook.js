@@ -19,7 +19,10 @@ angular.module('yo6App')
 			//was {scope:'read_stream, publish_stream, email'}
 
 			console.log('Facebook login()');
+			if (typeof FB == 'undefined') console.log('FB variable does not exist. Check that you have included the Facebook JS SDK file.');
+			
 			FB.getLoginStatus(function (response) {
+				console.log('Facebook getLoginStatus callback');
 				switch (response.status) {
 				case 'connected':
 					console.log('FB.login broadcast fb_connected (a1)');

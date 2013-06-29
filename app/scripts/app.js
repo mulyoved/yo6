@@ -45,6 +45,9 @@ app.run(function ($rootScope, autentication) {
 			facebookAppId: '193911810758167'
 		};
 	}
+	//Additional configuration
+	console.log("IsPhoneGap: %s", _isPhoneGap);
+	$rootScope.config.facebook_pg_login = _isPhoneGap;
 
 	//I don't understand why the toolbar.html template cannot access config.brand
 	$rootScope.brand = $rootScope.config.brand;
@@ -54,3 +57,4 @@ app.run(function ($rootScope, autentication) {
 
 	autentication.init();
 });
+

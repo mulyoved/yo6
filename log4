@@ -1,388 +1,187 @@
---------- beginning of /dev/log/main
 --------- beginning of /dev/log/system
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MtpService(23711): In MTPAPP onReceive:android.intent.action.BATTERY_CHANGED
-E/MtpService(23711): battPlugged Type : 2
-W/AlarmManager( 2171): FACTORY_ON= 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-I/Gmail   (23835): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 10604132, normalSync: true
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-W/SignalStrength( 2171): getGsmLevel=3
-W/SignalStrength( 2171): getLevel=3 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/SignalStrength( 2345): getGsmLevel=3
-W/SignalStrength( 2345): getLevel=3 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/SignalStrength( 2345): getGsmLevel=3
-W/SignalStrength( 2345): getLevel=3 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/SignalStrength( 2171): getGsmDbm=-97
-W/SignalStrength( 2171): getDbm=-97
-W/SignalStrength( 2171): getGsmAsuLevel=8
-W/SignalStrength( 2171): getAsuLevel=8
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-E/MTPJNIInterface(23711): Total object count 0
-I/InputReader( 2171): Touch event's action is 0x0 (deviceType=0) [pCnt=1, s=0.209 ]
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x0
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x0
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x0
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x0
-I/TwDVFSBroadcastReceiver( 2474): onLauncherIntent
-I/power   ( 2171): *** acquire_dvfs_lock : lockType : 1  freq : 1200000 
-I/InputReader( 2171): Touch event's action is 0x1 (deviceType=0) [pCnt=1, s=]
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x1
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x1
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x1
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x1
-I/Gmail   (23835): MainSyncRequestProto: lowestBkwdConvoId: 0, highestHandledServerOp: 10604132, normalSync: true
-I/Gmail   (23835): lowestBackward conversation id 0
-W/ActivityManager( 2171): mDVFSLock.acquire()
-I/Gmail   (23835): Schedule indexing for mulyoved@gmail.com
-I/SurfaceFlinger( 1860): id=264(79) createSurf 0x40ffc6b4 (1x1),1 flag=400, fvnt24x7
-I/webclipboard(23456): clipservice: android.sec.clipboard.ClipboardExManager@41b7d160
-I/dalvikvm-heap(23456): Grow heap (frag case) to 12.316MB for 1536016-byte allocation
-W/SignalStrength( 2171): getGsmLevel=2
-W/SignalStrength( 2171): getLevel=2 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2345): getGsmLevel=2
-W/SignalStrength( 2345): getLevel=2 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2345): getGsmLevel=2
-W/SignalStrength( 2345): getLevel=2 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2171): getGsmDbm=-97
-W/SignalStrength( 2171): getDbm=-97
-W/SignalStrength( 2171): getGsmAsuLevel=8
-W/SignalStrength( 2171): getAsuLevel=8
-W/SignalStrength( 2171): getGsmLevel=2
-W/SignalStrength( 2171): getLevel=2 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2171): getGsmDbm=-103
-W/SignalStrength( 2171): getDbm=-103
-W/SignalStrength( 2171): getGsmAsuLevel=5
-W/SignalStrength( 2171): getAsuLevel=5
-W/SignalStrength( 2345): getGsmLevel=2
-W/SignalStrength( 2345): getLevel=2 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2345): getGsmLevel=2
-W/SignalStrength( 2345): getLevel=2 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-I/SurfaceFlinger( 1860): id=263 Removed Mauncher idx=1 MapSz=3
-I/SurfaceFlinger( 1860): id=263 Removed Mauncher idx=-2 MapSz=3
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-I/SurfaceFlinger( 1860): id=265(5) createSurf 0x41b61bbc (1x1),1 flag=0, Fvnt24x7
-I/SurfaceFlinger( 1860): id=266(6) createSurf 0x413c3e7c (480x800),1 flag=400, Fvnt24x7
-I/ClipboardServiceEx( 2171): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
-W/ActivityManager( 2171): mDVFSLock.release()
-I/power   ( 2171): *** release_dvfs_lock : lockType : 1 
-I/SurfaceFlinger( 1860): id=264 Removed fvnt24x7 idx=5 MapSz=4
-I/SurfaceFlinger( 1860): id=264 Removed fvnt24x7 idx=-2 MapSz=4
-W/PowerManagerService( 2171): Timer 0x3->0x3|0x0
-I/GmsClient(23835): connect: bindService returned true for Intent { act=com.google.android.gms.icing.INDEX_SERVICE }
-I/Web Console(23456): Index.html 2.0.7:30
-I/Gmail   (23835): Sending provider changed intent: Intent { act=android.intent.action.PROVIDER_CHANGED dat=content://gmail-ls/unread/^iim (has extras) }
-I/Web Console(23456): TopToolbar 1.0:3
-I/Web Console(23456): app.run:24
-I/Web Console(23456): isProduction = [%s] [%s]:30
-I/Web Console(23456): window.fbAsyncInit c1:17
-I/Web Console(23456): window.fbAsyncInit c2:36
-I/Web Console(23456): window.fbAsyncInit b1:38
-I/Web Console(23456): window.fbAsyncInit b2:43
-I/Web Console(23456): window.fbAsyncInit b3:48
-I/Web Console(23456): window.fbAsyncInit b4:50
-I/Web Console(23456): window.fbAsyncInit c3:52
-I/Web Console(23456): TopToolbar inside directive:7
-I/Web Console(23456): MainCtrl:6
-I/Web Console(23456): EventsController:17
-I/Web Console(23456): load next page %s:52
-I/Web Console(23456): completed load next page %s:83
-I/Gmail   (23835): Sending provider changed intent: Intent { act=android.intent.action.PROVIDER_CHANGED dat=content://gmail-ls/unread/^i (has extras) }
-I/Web Console(23456): json - success:69
-I/Icing   (22492): Not enough disk space for indexing
-E/Icing   (22492): Aborting indexing of corpus 887939D96CD68F9E0F89844BCA994B85D622C882
-I/GATE    (23456): <GATE-M>DEV_ACTION_COMPLETED</GATE-M>
-W/Gmail   (23835): NotificationUtils: Showing notification with unreadCount of 4348 and unseenCount of 4
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/SignalStrength( 2171): getGsmLevel=1
-W/SignalStrength( 2171): getLevel=1 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-W/SignalStrength( 2345): getGsmLevel=1
-W/SignalStrength( 2345): getLevel=1 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-W/SignalStrength( 2345): getGsmLevel=1
-W/SignalStrength( 2345): getLevel=1 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-W/SignalStrength( 2171): getGsmDbm=-103
-W/SignalStrength( 2171): getDbm=-103
-W/SignalStrength( 2171): getGsmAsuLevel=5
-W/SignalStrength( 2171): getAsuLevel=5
-W/SignalStrength( 2171): getGsmLevel=1
-W/SignalStrength( 2171): getLevel=1 (SignalStrength: 3 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-W/SignalStrength( 2171): getGsmDbm=-107
-W/SignalStrength( 2171): getDbm=-107
-W/SignalStrength( 2171): getGsmAsuLevel=3
-W/SignalStrength( 2171): getAsuLevel=3
-W/SignalStrength( 2345): getGsmLevel=1
-W/SignalStrength( 2345): getLevel=1 (SignalStrength: 3 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-W/SignalStrength( 2345): getGsmLevel=1
-W/SignalStrength( 2345): getLevel=1 (SignalStrength: 3 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-I/SurfaceFlinger( 1860): id=265 Removed Fvnt24x7 idx=3 MapSz=3
-I/SurfaceFlinger( 1860): id=265 Removed Fvnt24x7 idx=-2 MapSz=3
-I/ClipboardServiceEx( 2171): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
-E/SpannableStringBuilder(23456): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
-E/SpannableStringBuilder(23456): SPAN_EXCLUSIVE_EXCLUSIVE spans cannot have a zero length
-W/SignalStrength( 2171): getGsmLevel=1
-W/SignalStrength( 2171): getLevel=1 (SignalStrength: 4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-W/SignalStrength( 2171): getGsmDbm=-105
-W/SignalStrength( 2171): getDbm=-105
-W/SignalStrength( 2171): getGsmAsuLevel=4
-W/SignalStrength( 2171): getAsuLevel=4
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/SignalStrength( 2345): getGsmLevel=1
-W/SignalStrength( 2345): getLevel=1 (SignalStrength: 4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-W/SignalStrength( 2345): getGsmLevel=1
-W/SignalStrength( 2345): getLevel=1 (SignalStrength: 4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
-I/InputReader( 2171): Touch event's action is 0x0 (deviceType=0) [pCnt=1, s=0.210 ]
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x0
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x0
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x0
-I/InputReader( 2171): Touch event's action is 0x1 (deviceType=0) [pCnt=1, s=]
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x1
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x1
-I/InputDispatcher( 2171): Delivering touch to current input target: action: 0x1
-I/ClipboardServiceEx( 2171): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
-I/Web Console(23456): MainCtrl login:73
-I/Web Console(23456): Facebook login():21
-E/Web Console(23456): ReferenceError: FB is not defined
-E/Web Console(23456):     at Object.login (file:///android_asset/www/scripts/services/Facebook.js:22:4)
-E/Web Console(23456):     at Object.service.login (file:///android_asset/www/scripts/services/autentication.js:74:13)
-E/Web Console(23456):     at file:///android_asset/www/components/angular/angular.js:6365:19
-E/Web Console(23456):     at file:///android_asset/www/components/angular/angular.js:12987:13
-E/Web Console(23456):     at Object.Scope.$eval (file:///android_asset/www/components/angular/angular.js:8057:28)
-E/Web Console(23456):     at Object.Scope.$apply (file:///android_asset/www/components/angular/angular.js:8137:23)
-E/Web Console(23456):     at HTMLButtonElement.<anonymous> (file:///android_asset/www/components/angular/angular.js:12986:17)
-E/Web Console(23456):     at HTMLButtonElement.jQuery.event.dispatch (file:///android_asset/www/components/jquery/jquery.js:4692:9)
-E/Web Console(23456):     at HTMLButtonElement.elemData.handle (file:///android_asset/www/components/jquery/jquery.js:4376:28):5754
-I/ClipboardServiceEx( 2171): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
-W/SignalStrength( 2171): getGsmLevel=2
-W/SignalStrength( 2171): getLevel=2 (SignalStrength: 4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2345): getGsmLevel=2
-W/SignalStrength( 2345): getLevel=2 (SignalStrength: 4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2345): getGsmLevel=2
-W/SignalStrength( 2345): getLevel=2 (SignalStrength: 4 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2171): getGsmDbm=-105
-W/SignalStrength( 2171): getDbm=-105
-W/SignalStrength( 2171): getGsmAsuLevel=4
-W/SignalStrength( 2171): getAsuLevel=4
-W/SignalStrength( 2171): getGsmLevel=2
-W/SignalStrength( 2171): getLevel=2 (SignalStrength: 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/SignalStrength( 2171): getGsmDbm=-101
-W/SignalStrength( 2171): getDbm=-101
-W/SignalStrength( 2171): getGsmAsuLevel=6
-W/SignalStrength( 2171): getAsuLevel=6
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/SignalStrength( 2345): getGsmLevel=2
-W/SignalStrength( 2345): getLevel=2 (SignalStrength: 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/SignalStrength( 2345): getGsmLevel=2
-W/SignalStrength( 2345): getLevel=2 (SignalStrength: 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/PowerManagerService( 2171): Timer 0x3->0x3|0x0
-I/InputDispatcher( 2171): Delivering key to current input target: action: 0x0
-I/InputDispatcher( 2171): Delivering key to current input target: action: 0x0
-I/InputDispatcher( 2171): Delivering key to current input target: action: 0x0
-I/PowerManagerService( 2171): Ulight 0x3->0x7|0x0
-I/InputDispatcher( 2171): Delivering key to current input target: action: 0x1
-I/InputDispatcher( 2171): Delivering key to current input target: action: 0x1
-I/InputDispatcher( 2171): Delivering key to current input target: action: 0x1
-I/ClipboardServiceEx( 2171): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
-I/Web Console(23456): exception firing pause event from native:1
-I/FlashBarService( 2394): mPkgManagerReceiver : onReceive
-E/Launcher(17067): Error finding setting, default accessibility to not found: accessibility_enabled
-I/SurfaceFlinger( 1860): id=267(16) createSurf 0x413bfd14 (480x800),1 flag=0, Mauncher
-I/ClipboardServiceEx( 2171): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
-W/IInputConnectionWrapper(23456): showStatusIcon on inactive InputConnection
-I/Web Console(23456): exception firing destroy event from native:1
-I/SurfaceFlinger( 1860): id=266 Removed Fvnt24x7 idx=4 MapSz=3
-I/SurfaceFlinger( 1860): id=266 Removed Fvnt24x7 idx=-2 MapSz=3
-E/CordovaWebView(23456): CordovaWebView: TIMEOUT ERROR!
-W/ResourceType(23456): Failure getting entry for 0x010802c0 (t=7 e=704) in package 0 (error -75)
-W/WindowManager( 2171): Attempted to add application window with unknown token Token{42802f50 null}.  Aborting.
-I/power   ( 2171): *** acquire_dvfs_lock : lockType : 1  freq : 1200000 
-I/PowerManagerService( 2171): Ulight 0x7->0x0|0x0
-W/PowerManagerService( 2171): CurLockF mPS:7 mUS=0
-W/PowerManagerService( 2171): type=PARTIAL_WAKE_LOCK              'MediaScannerService' active (mS=0)  activeT=283048  uid=10026  pid=16802
-W/PowerManagerService( 2171): mPokeLocks.size=0:
-E/AudioPolicyService( 1863): getOutput() tid 2137 ++
-E/AudioPolicyService( 1863): getOutput() tid 2137 --
-E/AudioPolicyService( 1863): getOutput() tid 4479 ++
-E/AudioPolicyService( 1863): getOutput() tid 4479 --
-E/AudioPolicyService( 1863): getOutput() tid 2141 ++
-E/AudioPolicyService( 1863): getOutput() tid 2141 --
-I/AudioFlinger( 1863): AudioFlinger::PlaybackThread::addTrack_l() start_output_streamtype(0, 1) for 2
-I/AudioFlinger( 1863): AudioFlinger::PlaybackThread::addTrack_l() set_parameters(1)
-I/yamaha::media::UserDep( 1863): UserDep::getRouteInfo(output: audioengine=0, devices=00000002h
-I/yamaha::media::UserDep( 1863):                       incall: onoff=0, devices=00000000h
-I/yamaha::media::UserDep( 1863):                       capture: onoff=0, devices=00100000h, audioSource=1
-I/yamaha::media::UserDep( 1863):                       playback: audio_onoff=0, line_onoff=0)
-I/yamaha::media::UserDep( 1863): UserDep::getRouteInfo(output: audioengine=0, devices=00000002h
-I/yamaha::media::UserDep( 1863):                       incall: onoff=0, devices=00000000h
-I/yamaha::media::UserDep( 1863):                       capture: onoff=0, devices=00100000h, audioSource=1
-I/yamaha::media::UserDep( 1863):                       playback: audio_onoff=1, line_onoff=0)
-E/LockPatternKeyguardView( 2171): mIsVoiceUnlockOn=false
-W/AlarmManager( 2171): FACTORY_ON= 0
-E/lights  ( 2171): write_int failed to open /sys/class/sec/led/led_pattern
-W/IInputConnectionWrapper(17067): getSelectedText on inactive InputConnection
-W/IInputConnectionWrapper(17067): setComposingText on inactive InputConnection
-W/IInputConnectionWrapper(17067): getExtractedText on inactive InputConnection
-E/lights  ( 2171): write_int failed to open /sys/class/sec/led/led_pattern
-I/AudioHardwareYamaha( 1863): AudioHardware::setParameters(keyValuePairs="screen_state=off")
-I/ALSAModule( 1863): Initialized ALSA PLAYBACK device hifi
-I/power   ( 2171): *** release_dvfs_lock : lockType : 1 
-I/PowerManagerService( 2171): Light Animator Finished currentValue=0
-I/dalvikvm-heap( 2171): Grow heap (frag case) to 26.154MB for 3072016-byte allocation
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-E/KeyguardViewMediator( 2171): 2. Lockscreen lock
-E/KeyguardViewMediator( 2171): Phone is boot completed. so can broadcast
-I/Choreographer( 2171): Skipped 33 frames!  The application may be doing too much work on its main thread.
-I/SurfaceFlinger( 1860): id=268(80) createSurf 0x412608ec (480x762),1 flag=0, Leyguard
-I/AudioFlinger( 1863): AudioFlinger::MixerThread::prepareTracks_l stop_output_streamtype(0, 1) for 2
-I/AudioFlinger( 1863): AudioFlinger::MixerThread::prepareTracks_l set_parameters(1)
-I/AudioFlinger( 1863): AudioFlinger::MixerThread::prepareTracks_l set_parameters is failed
-W/SignalStrength( 2171): getGsmLevel=3
-W/SignalStrength( 2171): getLevel=3 (SignalStrength: 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/SignalStrength( 2345): getGsmLevel=3
-W/SignalStrength( 2345): getLevel=3 (SignalStrength: 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/SignalStrength( 2345): getGsmLevel=3
-W/SignalStrength( 2345): getLevel=3 (SignalStrength: 6 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/SignalStrength( 2171): getGsmDbm=-101
-W/SignalStrength( 2171): getDbm=-101
-W/SignalStrength( 2171): getGsmAsuLevel=6
-W/SignalStrength( 2171): getAsuLevel=6
-W/SignalStrength( 2171): getGsmLevel=3
-W/SignalStrength( 2171): getLevel=3 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/SignalStrength( 2345): getGsmLevel=3
-W/SignalStrength( 2345): getLevel=3 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/SignalStrength( 2345): getGsmLevel=3
-W/SignalStrength( 2345): getLevel=3 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 3)
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/SignalStrength( 2171): getGsmDbm=-97
-W/SignalStrength( 2171): getDbm=-97
-W/SignalStrength( 2171): getGsmAsuLevel=8
-W/SignalStrength( 2171): getAsuLevel=8
-W/AlarmManager( 2171): FACTORY_ON= 0
-W/AlarmManager( 2171): FACTORY_ON= 0
-I/yamaha::media::UserDep( 1863): UserDep::getRouteInfo(output: audioengine=0, devices=00000002h
-I/yamaha::media::UserDep( 1863):                       incall: onoff=0, devices=00000000h
-I/yamaha::media::UserDep( 1863):                       capture: onoff=0, devices=00100000h, audioSource=1
-I/yamaha::media::UserDep( 1863):                       playback: audio_onoff=1, line_onoff=0)
-W/AlarmManager( 2171): FACTORY_ON= 0
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1748444
-E/MTPJNIInterface(23711): Genre:New Age
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1021369
-E/MTPJNIInterface(23711): Genre:misc
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1196384
-E/MTPJNIInterface(23711): Genre:Others
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:3655059
-E/MTPJNIInterface(23711): Genre:New Age
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:929959
-E/MTPJNIInterface(23711): Genre:New Age
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:929959
-E/MTPJNIInterface(23711): Genre:Blues
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:5616106
-E/MTPJNIInterface(23711): Genre:General Rock
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:4614795
-E/MTPJNIInterface(23711): Genre:New Age
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:0
-E/MTPJNIInterface(23711): Genre:<unknown>
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:3563458
-E/MTPJNIInterface(23711): Genre:<unknown>
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1563784
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1279963
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2211542
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2095611
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2550089
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1417420
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2028502
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2130275
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2519944
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2253364
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2230194
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1109058
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2232518
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:2534938
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1994569
-E/MTPJNIInterface(23711): Genre:Home Course
-E/MTPJNIInterface(23711): Total object count 1
-E/MTPJNIInterface(23711): Duration:1844457
-E/MTPJNIInterface(23711): Genre:Home Course
+--------- beginning of /dev/log/main
+I/InputReader( 2170): Touch event's action is 0x0 (deviceType=0) [pCnt=1, s=0.316 ]
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/TwDVFSBroadcastReceiver( 2370): onLauncherIntent
+I/power   ( 2170): *** acquire_dvfs_lock : lockType : 1  freq : 1200000 
+I/InputReader( 2170): Touch event's action is 0x1 (deviceType=0) [pCnt=1, s=]
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+I/power   ( 2170): *** release_dvfs_lock : lockType : 1 
+I/InputReader( 2170): Touch event's action is 0x0 (deviceType=0) [pCnt=1, s=0.317 ]
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/TwDVFSBroadcastReceiver( 2370): onLauncherIntent
+I/power   ( 2170): *** acquire_dvfs_lock : lockType : 1  freq : 1200000 
+I/InputReader( 2170): Touch event's action is 0x1 (deviceType=0) [pCnt=1, s=]
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+E/Watchdog( 2170): !@Sync 364
+I/power   ( 2170): *** release_dvfs_lock : lockType : 1 
+W/PowerManagerService( 2170): Timer 0x3->0x3|0x0
+W/SignalStrength( 2170): getGsmLevel=2
+W/SignalStrength( 2170): getLevel=2 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/SignalStrength( 2343): getGsmLevel=2
+W/SignalStrength( 2343): getLevel=2 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/SignalStrength( 2343): getGsmLevel=2
+W/SignalStrength( 2343): getLevel=2 (SignalStrength: 8 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/SignalStrength( 2170): getGsmDbm=-97
+W/SignalStrength( 2170): getDbm=-97
+W/SignalStrength( 2170): getGsmAsuLevel=8
+W/SignalStrength( 2170): getAsuLevel=8
+W/SignalStrength( 2170): getGsmLevel=2
+W/SignalStrength( 2170): getLevel=2 (SignalStrength: 7 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/SignalStrength( 2170): getGsmDbm=-99
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/SignalStrength( 2170): getDbm=-99
+W/SignalStrength( 2170): getGsmAsuLevel=7
+W/SignalStrength( 2170): getAsuLevel=7
+W/SignalStrength( 2343): getGsmLevel=2
+W/SignalStrength( 2343): getLevel=2 (SignalStrength: 7 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/SignalStrength( 2343): getGsmLevel=2
+W/SignalStrength( 2343): getLevel=2 (SignalStrength: 7 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+I/InputReader( 2170): Touch event's action is 0x0 (deviceType=0) [pCnt=1, s=0.318 ]
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/TwDVFSBroadcastReceiver( 2370): onLauncherIntent
+I/power   ( 2170): *** acquire_dvfs_lock : lockType : 1  freq : 1200000 
+I/InputReader( 2170): Touch event's action is 0x1 (deviceType=0) [pCnt=1, s=]
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+W/ActivityManager( 2170): mDVFSLock.acquire()
+I/SurfaceFlinger( 1865): id=236(57) createSurf 0x4001aabc (1x1),1 flag=400, fvnt24x7
+I/dalvikvm(21502): Turning on JNI app bug workarounds for target SDK version 7...
+W/ActivityThread(21502): Application com.finalg.evnt24x7 can be debugged on port 8100...
+I/CordovaLog(21502): Changing log level to DEBUG(3)
+I/CordovaLog(21502): Found preference for useBrowserHistory=true
+I/CordovaLog(21502): Found preference for exit-on-suspend=false
+I/CordovaLog(21502): Found preference for fullscreen=true
+I/webclipboard(21502): clipservice: android.sec.clipboard.ClipboardExManager@41c34da8
+I/SurfaceFlinger( 1865): id=235 Removed Mauncher idx=1 MapSz=3
+I/SurfaceFlinger( 1865): id=235 Removed Mauncher idx=-2 MapSz=3
+I/dalvikvm-heap(21502): Grow heap (frag case) to 11.926MB for 1536016-byte allocation
+I/SurfaceFlinger( 1865): id=237(1) createSurf 0x40095eac (1x1),1 flag=0, Fvnt24x7
+I/power   ( 2170): *** acquire_dvfs_lock : lockType : 1  freq : 1000000 
+I/SurfaceFlinger( 1865): id=238(2) createSurf 0x4169efb4 (480x800),1 flag=400, Fvnt24x7
+I/ClipboardServiceEx( 2170): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
+I/power   ( 2170): *** release_dvfs_lock : lockType : 1 
+W/ActivityManager( 2170): mDVFSLock.release()
+I/SurfaceFlinger( 1865): id=236 Removed fvnt24x7 idx=5 MapSz=4
+I/SurfaceFlinger( 1865): id=236 Removed fvnt24x7 idx=-2 MapSz=4
+W/PowerManagerService( 2170): Timer 0x3->0x3|0x0
+I/Web Console(21502): Index.html 2.1.3:30
+I/MotionRecognitionService( 2170):  send 71=FLAT ~~
+W/SignalStrength( 2170): getGsmLevel=2
+W/SignalStrength( 2170): getLevel=2 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/SignalStrength( 2170): getGsmDbm=-103
+W/SignalStrength( 2170): getDbm=-103
+W/SignalStrength( 2170): getGsmAsuLevel=5
+W/SignalStrength( 2170): getAsuLevel=5
+W/SignalStrength( 2343): getGsmLevel=2
+W/SignalStrength( 2343): getLevel=2 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/SignalStrength( 2343): getGsmLevel=2
+W/SignalStrength( 2343): getLevel=2 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 2)
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+I/Web Console(21502): Call phonegapapp.initialize:63
+I/Web Console(21502): TopToolbar 1.0:3
+I/Web Console(21502): Completed load all sccripts:81
+I/Web Console(21502): autentication factory:6
+I/Web Console(21502): app.run:24
+I/Web Console(21502): isProduction = [%s] [%s]:30
+I/Web Console(21502): Facebook, phonegap init:21
+I/Web Console(21502): window.fbAsyncInit a1:31
+I/Web Console(21502): window.fbAsyncInit a3:42
+I/Web Console(21502): PhoneGap: Received Event: deviceready:40
+I/Web Console(21502): TopToolbar inside directive:7
+I/Web Console(21502): MainCtrl:6
+I/Web Console(21502): EventsController:17
+I/Web Console(21502): load next page %s:52
+I/Web Console(21502): completed load next page %s:83
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+I/Web Console(21502): json - success:69
+W/SignalStrength( 2170): getGsmLevel=1
+W/SignalStrength( 2170): getLevel=1 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
+W/SignalStrength( 2343): getGsmLevel=1
+W/SignalStrength( 2170): getGsmDbm=-103
+W/SignalStrength( 2170): getDbm=-103
+W/SignalStrength( 2170): getGsmAsuLevel=5
+W/SignalStrength( 2170): getAsuLevel=5
+W/SignalStrength( 2343): getLevel=1 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
+W/SignalStrength( 2343): getGsmLevel=1
+W/SignalStrength( 2343): getLevel=1 (SignalStrength: 5 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
+W/SignalStrength( 2170): getGsmLevel=1
+W/SignalStrength( 2170): getLevel=1 (SignalStrength: 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
+W/SignalStrength( 2170): getGsmDbm=-109
+W/SignalStrength( 2170): getDbm=-109
+W/SignalStrength( 2170): getGsmAsuLevel=2
+W/SignalStrength( 2170): getAsuLevel=2
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/SignalStrength( 2343): getGsmLevel=1
+W/SignalStrength( 2343): getLevel=1 (SignalStrength: 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
+W/SignalStrength( 2343): getGsmLevel=1
+W/SignalStrength( 2343): getLevel=1 (SignalStrength: 2 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 -1 gsm|lte 1)
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+I/GATE    (21502): <GATE-M>DEV_ACTION_COMPLETED</GATE-M>
+I/SurfaceFlinger( 1865): id=237 Removed Fvnt24x7 idx=3 MapSz=3
+I/SurfaceFlinger( 1865): id=237 Removed Fvnt24x7 idx=-2 MapSz=3
+I/ClipboardServiceEx( 2170): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
+I/MotionRecognitionService( 2170):  send 71=FLAT ~~
+I/InputReader( 2170): Touch event's action is 0x0 (deviceType=0) [pCnt=1, s=0.319 ]
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x0
+I/InputReader( 2170): Touch event's action is 0x1 (deviceType=0) [pCnt=1, s=]
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering touch to current input target: action: 0x1
+I/ClipboardServiceEx( 2170): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
+I/Web Console(21502): MainCtrl login:103
+I/Web Console(21502): Facebook login():21
+I/ClipboardServiceEx( 2170): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
+W/PowerManagerService( 2170): Timer 0x3->0x3|0x0
+I/InputDispatcher( 2170): Delivering key to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering key to current input target: action: 0x0
+I/InputDispatcher( 2170): Delivering key to current input target: action: 0x0
+I/PowerManagerService( 2170): Ulight 0x3->0x7|0x0
+I/InputDispatcher( 2170): Delivering key to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering key to current input target: action: 0x1
+I/InputDispatcher( 2170): Delivering key to current input target: action: 0x1
+I/ClipboardServiceEx( 2170): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
+I/FlashBarService( 2413): mPkgManagerReceiver : onReceive
+E/Launcher( 2537): Error finding setting, default accessibility to not found: accessibility_enabled
+I/SurfaceFlinger( 1865): id=239(19) createSurf 0x40da2594 (480x800),1 flag=0, Mauncher
+W/IInputConnectionWrapper(21502): showStatusIcon on inactive InputConnection
+I/ClipboardServiceEx( 2170): Send intent for dismiss clipboard dialog inside hideCurrentInputLocked() !
+I/SurfaceFlinger( 1865): id=238 Removed Fvnt24x7 idx=4 MapSz=3
+I/SurfaceFlinger( 1865): id=238 Removed Fvnt24x7 idx=-2 MapSz=3
+W/PowerManagerService( 2170): Timer 0x7->0x3|0x0
+I/PowerManagerService( 2170): Ulight 0x7->0x3|0x0
+I/MotionRecognitionService( 2170):  send 71=FLAT ~~
+I/APO/CPO (21541): Can not find at_distributor. Decided CPO mode
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0
+W/AlarmManager( 2170): FACTORY_ON= 0

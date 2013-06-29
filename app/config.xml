@@ -4,7 +4,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "com.finalg.evnt24x7"
-        version   = "1.0.0">
+        version   = "1.0.1">
 
     <name>Evnt24x7</name>
 
@@ -15,6 +15,11 @@
     <author href="http://www.fin-alg.com" email="mulyoved@gmail.com">
         Final
     </author>
+
+    <gap:plugin name="FacebookConnect">
+        <param name="APP_ID" value="193911810758167" />
+        <param name="APP_NAME" value="Test001" />
+    </gap:plugin>    
 
     <!--
         Enable individual API permissions here.
@@ -30,7 +35,7 @@
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
-    <preference name="phonegap-version"           value="2.7.0" />          <!-- all: current version of PhoneGap -->
+    <preference name="phonegap-version"           value="2.9.0" />          <!-- all: current version of PhoneGap -->
     <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
     <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
     <preference name="fullscreen"                 value="true" />           <!-- all: hides the status bar at the top of the screen -->
