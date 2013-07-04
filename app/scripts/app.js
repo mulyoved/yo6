@@ -22,6 +22,16 @@ var app = angular.module('yo6App', ['infinite-scroll'])
 
 app.run(function ($rootScope, autentication) {
 	console.log('app.run');
+	var isPhoneGap = false;
+	if (typeof _isPhoneGap === "undefined") {
+		console.warn('_isPhoneGap is not defined');
+		isPhoneGap = false;
+	}
+	else {
+		isPhoneGap = _isPhoneGap;
+	}
+
+
 
 	var nodeEnv = '/* @echo NODE_ENV */';
 	
@@ -46,8 +56,8 @@ app.run(function ($rootScope, autentication) {
 		};
 	}
 	//Additional configuration
-	console.log("IsPhoneGap: %s", _isPhoneGap);
-	$rootScope.config.facebook_pg_login = _isPhoneGap;
+	console.log("IsPhoneGap: %s", isPhoneGap);
+	$rootScope.config.facebook_pg_login = isPhoneGap;
 
 	//I don't understand why the toolbar.html template cannot access config.brand
 	$rootScope.brand = $rootScope.config.brand;

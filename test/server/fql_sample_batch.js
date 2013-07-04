@@ -10,7 +10,8 @@ var assert = require("assert");
 var graph = require('fbgraph');
 var format = require('util').format;
 var inspect = require('util').inspect;
-var Q = require('../../server/node_modules/q');
+//var Q = require('../../server/node_modules/q');
+var Q = require('q');
 
 var mongoose = require('mongoose-q')();
 if (mongoose.modelNames().length == 0) {
@@ -73,7 +74,7 @@ describe('fbgraph', function(){
 	// Mongo: Save Events Details
 
 		it('start', function(done) {
-			this.timeout(0);
+			this.timeout(180000);
 
 			var query1 = {
 				user_info: format('SELECT %s FROM user WHERE uid = %d', userFields, FBConfig.me_id),
@@ -153,7 +154,7 @@ describe('fbgraph', function(){
 				// answer, 2 1st items are the mongo saving all the rest are fql answers 
 
 				console.log('Step2 completed %s', answer.length);
-				debugger;
+				//debugger;
 
 				var promiseArray = [];
 				var len = answer.length;

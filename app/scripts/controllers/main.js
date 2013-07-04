@@ -5,12 +5,6 @@ var app = angular.module('yo6App');
 app.controller('MainCtrl', function (Facebook, $scope, $rootScope, $location, autentication) {
 	console.log('MainCtrl');
 
-	$scope.awesomeThings = [
-	  'HTML5 Boilerplate',
-	  'AngularJS',
-	  'Karma'
-	];
-	
 	$scope.autentication = autentication;
 })
 .controller('EventsController', function($scope, $rootScope, eventStorage) {

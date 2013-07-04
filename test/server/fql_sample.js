@@ -169,7 +169,7 @@ describe('fbgraph', function(){
     });
 
     it('get all friend events id', function(done) {
-      this.timeout(10000);
+      this.timeout(20000);
       fql(done, "SELECT eid FROM event_member WHERE uid IN (SELECT uid2 FROM friend WHERE uid1 = me())",compareList,4200,'eid')
     });
 
@@ -198,7 +198,7 @@ describe('fbgraph', function(){
     });
 
     it('get 1 friend all events details', function(done) {
-      this.timeout(10000);
+      this.timeout(20000);
       //https://www.facebook.com/echoEchoo
       fql(done, format("SELECT %s FROM event WHERE eid IN (SELECT eid FROM event_member WHERE uid = '%s')", eventFields, FBConfig.uid),
         compareList,20,'eid');
