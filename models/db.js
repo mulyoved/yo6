@@ -9,7 +9,7 @@ mongoose.set('debug', false);
 
 //User
 var userSchema = new mongoose.Schema({
-	userID: Number,
+	userID: { type: Number, index: { unique: true , required: true}},
 	accessToken: String,
 	longAaccessToken: String,
 	expireIn: Number,
@@ -21,7 +21,11 @@ var userSchema = new mongoose.Schema({
 },
 { versionKey: false });
 
-mongoose.model( 'User', userSchema );
+var Event = mongoose.model( 'User', userSchema );
+
+Event.on('index', function (err) {
+  if (err) console.error(err); // error occurred during index creation
+})
 
 var Location = {
 		street: String,
@@ -68,13 +72,16 @@ var fbUserSchema = new mongoose.Schema({
 	sort_last_name: String,
 	subscriber_count: Number,
 	timezone: Number,
-	uid: Number,
+	uid: { type: Number, index: { unique: true , required: true}},
 	username: String,
 	friends: [Number]
 },
 { versionKey: false });
 
-mongoose.model( 'fbUser', fbUserSchema );
+var fbUser = mongoose.model( 'fbUser', fbUserSchema );
+fbUser.on('index', function (err) {
+  if (err) console.error(err); // error occurred during index creation
+})
 
 var fbEvent = new mongoose.Schema({
 	all_members_count: Number,
@@ -84,7 +91,7 @@ var fbEvent = new mongoose.Schema({
 	creator_cursor: String,
 	declined_count: Number,
 	description: String,
-	eid: Number,
+	eid: { type: Number, index: { unique: true , required: true}},
 	end_time: String,
 	has_profile_pic: Boolean,
 	hide_guest_list: Boolean,
@@ -116,8 +123,11 @@ var fbEvent = new mongoose.Schema({
 { versionKey: false });
 
 
-mongoose.model( 'fbEvent', fbEvent );
+var fbEvent = mongoose.model( 'fbEvent', fbEvent );
 
+fbEvent.on('index', function (err) {
+  if (err) console.error(err); // error occurred during index creation
+})
 
 //Connect
 console.log('call  mongoose.connect');
